@@ -1,0 +1,69 @@
+using UnityEngine;
+
+public class Player_3D_movement : MonoBehaviour
+{
+    public static Player_3D_movement instance;
+    private string mainScene;
+
+    public Rigidbody myRigidbody;
+    public float movespeed = 10f;
+
+    private void Awake()
+    {
+        //if (instance != null && instance != this)
+        //{
+        //    Destroy(this.gameObject);
+        //}
+        //else
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(this.gameObject);
+        //}
+        mainScene = "updataed map";
+
+        //mainScene = SaveData.instance.mainScene;
+    }
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Movement
+        if (Input.GetKey(KeyCode.LeftArrow) == true || Input.GetKey(KeyCode.A) == true)
+        {
+            Vector3 newVelocity = myRigidbody.linearVelocity;
+            newVelocity.x = -movespeed;
+
+            myRigidbody.linearVelocity = newVelocity;
+        }
+        if (Input.GetKey(KeyCode.RightArrow) == true || Input.GetKey(KeyCode.D) == true)
+        {
+            Vector3 newVelocity = myRigidbody.linearVelocity;
+            newVelocity.x = movespeed;
+
+            myRigidbody.linearVelocity = newVelocity;
+        }
+        if (Input.GetKey(KeyCode.DownArrow) == true || Input.GetKey(KeyCode.S) == true)
+        {
+            Vector3 newVelocity = myRigidbody.linearVelocity;
+            newVelocity.z = -movespeed;
+
+            myRigidbody.linearVelocity = newVelocity;
+        }
+        if (Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.W) == true)
+        {
+            Vector3 newVelocity = myRigidbody.linearVelocity;
+            newVelocity.z = movespeed;
+
+            myRigidbody.linearVelocity = newVelocity;
+        }
+
+    }
+}
