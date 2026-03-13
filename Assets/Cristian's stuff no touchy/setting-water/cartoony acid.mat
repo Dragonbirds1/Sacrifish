@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cartoony water
+  m_Name: cartoony acid
   m_Shader: {fileID: -6465566751694194690, guid: 4c815f0a88577c74b8d6f9a1311b998a,
     type: 3}
   m_Parent: {fileID: 0}
