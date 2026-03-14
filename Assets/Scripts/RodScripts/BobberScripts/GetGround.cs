@@ -4,6 +4,7 @@ public class GetGround : MonoBehaviour
 {
     public CastRod castRod;
     public Rigidbody bobberRB;
+    public GameObject bobber;
 
     public bool inWater;
 

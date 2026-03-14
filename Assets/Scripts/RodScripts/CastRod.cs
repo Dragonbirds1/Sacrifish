@@ -5,7 +5,7 @@ public class CastRod : MonoBehaviour
 {
     public PlayerMotor motor;
 
-    public GameObject playerCam;
+    public GameObject playerCam, bobber;
     public Transform bobberLocation;
     public Transform bobberTransform;
     public GameObject bobberCasted;
@@ -31,8 +31,8 @@ public class CastRod : MonoBehaviour
 
     void Start()
     {
-        bobberRB.isKinematic = true;
-        bobberTransform.SetParent(playerCam.transform);
+        //bobberRB.isKinematic = true;
+        //bobberTransform.SetParent(playerCam.transform);
         bobberTransform.position = bobberLocation.position;
     }
 
@@ -81,6 +81,11 @@ public class CastRod : MonoBehaviour
 
     void Cast()
     {
+        // When cast starts
+        bobber.GetComponent<BobberDangling>().isCasted = true;
+
+        castForce = castForce + 10;
+
         isCharging = false;
         isCasted = true;
         canCast = false;
@@ -101,11 +106,16 @@ public class CastRod : MonoBehaviour
     {
         Debug.Log("Retracted Rod!");
 
-        bobberRB.isKinematic = true;
-        bobberRB.linearVelocity = Vector3.zero;
+        // When retracted
+        bobber.GetComponent<BobberDangling>().isCasted = false;
 
-        bobberTransform.SetParent(playerCam.transform);
-        bobberTransform.position = bobberLocation.position;
+        bobber.GetComponent<BobberWaterControl>().ExitWater();
+
+        //bobberRB.isKinematic = true;
+        //bobberRB.linearVelocity = Vector3.zero;
+
+        //bobberTransform.SetParent(playerCam.transform);
+        //bobberTransform.position = bobberLocation.position;
 
         isCasted = false;
 

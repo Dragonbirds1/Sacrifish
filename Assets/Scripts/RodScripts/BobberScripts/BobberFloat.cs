@@ -1,55 +1,73 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class BobberFloat : MonoBehaviour
 {
-    public float waterLevel = 0f;
-    public float waveHeight = 0.2f;
-    public float waveFrequency = 0.5f;
-    public float waveSpeed = 1.5f;
-    public float floatOffset = 0.03f;
-    public float followSpeed = 8f;
+    public Transform rodTip;          // Rod tip
+    public float maxLineLength = 3f;  // Maximum line length
+    public float floatOffset = 0.1f;  // How much above water surface
+    public float lineStiffness = 20f; // Pull back to max line
+    public float damping = 5f;        // Smooth swing
 
-    public Rigidbody rb;
-
+    private Rigidbody rb;
     private bool inWater = false;
+    private float waterSurfaceY = 0f;
 
     void Start()
     {
-        rb.isKinematic = true; // start kinematic so it doesn't fall
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = true;
     }
 
     void FixedUpdate()
     {
+        if (rodTip == null) return;
+
+        // Max line constraint
+        Vector3 dir = transform.position - rodTip.position;
+        float distance = dir.magnitude;
+
+        if (distance > maxLineLength)
+        {
+            Vector3 targetPos = rodTip.position + dir.normalized * maxLineLength;
+            Vector3 force = (targetPos - transform.position) * lineStiffness;
+
+            rb.linearVelocity *= 1f - damping * Time.fixedDeltaTime;
+            rb.AddForce(force, ForceMode.Acceleration);
+        }
+
+        // Floating on water
         if (inWater)
         {
-            // Bob with shader wave
-            float wave = Mathf.Sin((transform.position.x + transform.position.z) * waveFrequency + Time.time * waveSpeed) * waveHeight;
-            float targetHeight = waterLevel + wave + floatOffset;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
 
-            Vector3 pos = transform.position;
-            pos.y = Mathf.Lerp(pos.y, targetHeight, Time.fixedDeltaTime * followSpeed);
-            transform.position = pos;
+            Vector3 pos = rb.position;
+            pos.y = Mathf.Max(pos.y, waterSurfaceY + floatOffset);
+            rb.position = pos;
+
+            rb.linearVelocity = Vector3.zero;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.None;
         }
     }
 
-    // Call when bobber hits water
-    public void EnterWater()
+    void OnCollisionEnter(Collision collision)
     {
-        inWater = true;
-        rb.isKinematic = true; // stop physics, follow wave
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        if (collision.collider.CompareTag("Water"))
+        {
+            inWater = true;
+            waterSurfaceY = collision.contacts[0].point.y; // Use the Y where the bobber hit
+            rb.useGravity = false;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
     }
 
-    // Call when bobber is retracted
-    public void ResetBobber(Transform rodTip)
+    public void ExitWater()
     {
         inWater = false;
-        rb.isKinematic = true;
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-
-        transform.position = rodTip.position;
-        transform.rotation = rodTip.rotation;
+        rb.useGravity = true;
     }
 }
