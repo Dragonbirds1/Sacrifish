@@ -3,25 +3,29 @@ using UnityEngine;
 public class GetGround : MonoBehaviour
 {
     public CastRod castRod;
-    public LayerMask whatIsGround, whatIsWater;
     public Rigidbody bobberRB;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public bool inWater;
 
-    }
-
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Ground") && castRod.canCast == false || collision.collider.CompareTag("Water") && castRod.canCast == false)
+        if (!castRod.canCast)
         {
-            bobberRB.isKinematic = true;
+            if (collision.collider.CompareTag("Water"))
+            {
+                inWater = true;
+
+                bobberRB.linearVelocity = Vector3.zero;
+                bobberRB.angularVelocity = Vector3.zero;
+
+                Debug.Log("Bobber hit water!");
+            }
+
+            if (collision.collider.CompareTag("Ground"))
+            {
+                bobberRB.linearVelocity = Vector3.zero;
+                bobberRB.isKinematic = true;
+            }
         }
     }
 }

@@ -1,92 +1,133 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class CastRod : MonoBehaviour
 {
-    /// <summary>
-    /// This script will handle casting the rod.
-    /// </summary>
-
     public PlayerMotor motor;
-    public LayerMask whatIsNotWater, whatIsWater;
-    public GameObject player, bobber, bobberSpawn, playerCam, bobberCasted;
-    public Transform bobberLocation, bobberTransform;
-    public Image fillForce;
-    public Rigidbody bobberRB; // Rigidbody that will be pushed away when casted.
-    public KeyCode castKey;
-    public bool isCasted, isRecast, canAddForce, canRemoveForce, canChangeForce;
-    public bool startCastReset, canCast, startedRetracked;
-    public float castForce, maxCastForce, minCastForce, timeTillResetCast;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject playerCam;
+    public Transform bobberLocation;
+    public Transform bobberTransform;
+    public GameObject bobberCasted;
+
+    public Rigidbody bobberRB;
+
+    public Image fillForce;
+
+    public KeyCode castKey = KeyCode.Mouse0;
+
+    public float castForce;
+    public float maxCastForce = 20f;
+    public float minCastForce = 2f;
+
+    public float chargeSpeed = 1.5f;
+
+    public bool isCharging;
+    public bool isCasted;
+    public bool canCast = true;
+
+    float chargeDir = 1f;
+    float cooldownTimer;
+
     void Start()
     {
         bobberRB.isKinematic = true;
+        bobberTransform.SetParent(playerCam.transform);
+        bobberTransform.position = bobberLocation.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        fillForce.fillAmount = castForce;
-        if (startCastReset)
+        UpdateCooldown();
+        UpdateUI();
+
+        if (canCast && !isCasted)
         {
-            timeTillResetCast += Time.deltaTime;
-            if (timeTillResetCast >= 3)
+            HandleCharging();
+        }
+
+        if (Input.GetKeyUp(castKey) && isCharging)
+        {
+            Cast();
+        }
+
+        if (isCasted && Input.GetKeyDown(castKey))
+        {
+            Retract();
+        }
+    }
+
+    void HandleCharging()
+    {
+        if (Input.GetKey(castKey))
+        {
+            isCharging = true;
+
+            castForce += chargeDir * chargeSpeed * Time.deltaTime;
+
+            if (castForce >= maxCastForce)
+            {
+                castForce = maxCastForce;
+                chargeDir = -1;
+            }
+
+            if (castForce <= minCastForce)
+            {
+                castForce = minCastForce;
+                chargeDir = 1;
+            }
+        }
+    }
+
+    void Cast()
+    {
+        isCharging = false;
+        isCasted = true;
+        canCast = false;
+
+        bobberTransform.SetParent(bobberCasted.transform);
+
+        bobberRB.isKinematic = false;
+        bobberRB.linearVelocity = Vector3.zero;
+
+        bobberRB.AddForce(bobberLocation.forward * castForce, ForceMode.Impulse);
+
+        Debug.Log("Casted Rod! Force: " + castForce);
+
+        castForce = 0;
+    }
+
+    void Retract()
+    {
+        Debug.Log("Retracted Rod!");
+
+        bobberRB.isKinematic = true;
+        bobberRB.linearVelocity = Vector3.zero;
+
+        bobberTransform.SetParent(playerCam.transform);
+        bobberTransform.position = bobberLocation.position;
+
+        isCasted = false;
+
+        cooldownTimer = 0;
+    }
+
+    void UpdateCooldown()
+    {
+        if (!canCast)
+        {
+            cooldownTimer += Time.deltaTime;
+
+            if (cooldownTimer >= 1.5f)
             {
                 canCast = true;
-                startCastReset = false;
-                timeTillResetCast = 0;
+                cooldownTimer = 0;
             }
         }
-        if (Input.GetKey(castKey) && canCast)
-        {
-            canChangeForce = true;
-            if (canChangeForce)
-            {
-                if (castForce < maxCastForce && canAddForce)
-                {
-                    //castForce = minCastForce;
-                    canRemoveForce = false;
-                    castForce += Time.deltaTime;
-                }
-                else if (castForce >= maxCastForce || canRemoveForce)
-                {
-                    canAddForce = false;
-                    canRemoveForce = true;
-                    //castForce = maxCastForce;
-                    castForce -= Time.deltaTime;
-                    if (castForce <= 0)
-                    {
-                        canAddForce = true;
-                        canRemoveForce = false;
-                    }
-                }
-            }
-        }
-        else if (Input.GetKeyUp(castKey) && canCast == true)
-        {
-            castForce = castForce + 10;
-            bobberTransform.SetParent(bobberCasted.transform);
-            bobberRB.isKinematic = false;
-            canChangeForce = false;
-            canCast = false;
-            startedRetracked = true;
-            bobberRB.AddForce(bobberLocation.forward * castForce, ForceMode.Impulse);
-            Debug.Log("Casted Rod! Cast Force: " + castForce);
-            castForce = 0;
-        }
-        else if (Input.GetKey(castKey) && canCast == false)
-        {
-            startCastReset = true;
-            if (startedRetracked)
-            {
-                Debug.Log("Retracked Rod!");
-                bobberTransform.SetParent(playerCam.transform);
-                bobberTransform.position = bobberLocation.transform.position;
-                startedRetracked = false;
-            }
-        }
+    }
+
+    void UpdateUI()
+    {
+        fillForce.fillAmount = castForce / maxCastForce;
     }
 }
