@@ -25,6 +25,7 @@ public class CastRod : MonoBehaviour
     public bool isCharging;
     public bool isCasted;
     public bool canCast = true;
+    public bool startReset;
 
     float chargeDir = 1f;
     float cooldownTimer;
@@ -118,19 +119,21 @@ public class CastRod : MonoBehaviour
         //bobberTransform.position = bobberLocation.position;
 
         isCasted = false;
+        startReset = true;
 
         cooldownTimer = 0;
     }
 
     void UpdateCooldown()
     {
-        if (!canCast)
+        if (startReset)
         {
             cooldownTimer += Time.deltaTime;
 
             if (cooldownTimer >= 1.5f)
             {
                 canCast = true;
+                startReset = false;
                 cooldownTimer = 0;
             }
         }
