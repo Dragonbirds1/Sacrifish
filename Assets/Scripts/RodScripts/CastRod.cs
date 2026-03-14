@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -10,8 +11,9 @@ public class CastRod : MonoBehaviour
 
     public PlayerMotor motor;
     public LayerMask whatIsNotWater, whatIsWater;
-    public GameObject player, bobber;
-    public Transform bobberLocation;
+    public GameObject player, bobber, bobberSpawn, playerCam, bobberCasted;
+    public Transform bobberLocation, bobberTransform;
+    public Image fillForce;
     public Rigidbody bobberRB; // Rigidbody that will be pushed away when casted.
     public KeyCode castKey;
     public bool isCasted, isRecast, canAddForce, canRemoveForce, canChangeForce;
@@ -21,12 +23,13 @@ public class CastRod : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        bobberRB.isKinematic = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        fillForce.fillAmount = castForce;
         if (startCastReset)
         {
             timeTillResetCast += Time.deltaTime;
@@ -64,9 +67,13 @@ public class CastRod : MonoBehaviour
         }
         else if (Input.GetKeyUp(castKey) && canCast == true)
         {
+            castForce = castForce + 10;
+            bobberTransform.SetParent(bobberCasted.transform);
+            bobberRB.isKinematic = false;
             canChangeForce = false;
             canCast = false;
             startedRetracked = true;
+            bobberRB.AddForce(bobberLocation.forward * castForce, ForceMode.Impulse);
             Debug.Log("Casted Rod! Cast Force: " + castForce);
             castForce = 0;
         }
@@ -76,9 +83,10 @@ public class CastRod : MonoBehaviour
             if (startedRetracked)
             {
                 Debug.Log("Retracked Rod!");
+                bobberTransform.SetParent(playerCam.transform);
+                bobberTransform.position = bobberLocation.transform.position;
                 startedRetracked = false;
             }
         }
-        //bobberRB.AddForce(bobberLocation.forward * castForce, ForceMode.Impulse);
     }
 }
