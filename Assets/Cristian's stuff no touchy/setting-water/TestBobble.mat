@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: test bobble
+  m_Name: TestBobble
   m_Shader: {fileID: -6465566751694194690, guid: 4c815f0a88577c74b8d6f9a1311b998a,
     type: 3}
   m_Parent: {fileID: 0}
@@ -111,14 +111,14 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FlowSpeed: 0.32
+    - _FlowSpeed: 0.17
     - _FoamDensity: 5.99
     - _FoamSpeed: 1.29
-    - _FoamThickness: 4.1
+    - _FoamThickness: 3.64
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _MaxHight: 0.398
+    - _MaxHight: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -131,7 +131,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _WaveHight: 0.7
+    - _WaveHight: 0.9
     - _WaveSpread: 6.38
     - _WorkflowMode: 1
     - _ZWrite: 1
