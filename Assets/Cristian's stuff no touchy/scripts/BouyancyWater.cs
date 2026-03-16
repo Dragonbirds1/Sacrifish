@@ -8,6 +8,8 @@ public class WaterBuoyant : MonoBehaviour
     public float AirDrag = 0f;
     public float AirAngularDrag = 0.05f;
     public float FloatingPower = 15f;
+    public CastRod castRod;
+    public BobberWaterControl bobberWaterControl;
 
     [Header("Water Plane Reference")]
     public Transform waterPlane;
@@ -96,11 +98,15 @@ public class WaterBuoyant : MonoBehaviour
         // ALWAYS apply force toward the wave surface — both up AND down
         // Negative difference = below water -> force pushes UP
         // Positive difference = above water -> force pushes DOWN
-        m_Rigidbody.AddForceAtPosition(
+
+        if (castRod.isCasted == true && bobberWaterControl.canFloat == true)
+        {
+            m_Rigidbody.AddForceAtPosition(
             Vector3.up * FloatingPower * -difference,
             transform.position,
             ForceMode.Force
-        );
+            );
+        }
 
         // Tilt to match wave surface
         Vector3 waveNormal = GetWaveNormal(transform.position);

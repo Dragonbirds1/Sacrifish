@@ -4,7 +4,8 @@ using UnityEngine;
 public class BobberWaterControl : MonoBehaviour
 {
     private Rigidbody rb;
-    private bool inWater = false;
+    public bool inWater = false;
+    public bool canFloat = false;
     private float waterLevel;
 
     public float floatOffset = 0.1f; // Keep bobber slightly above water
@@ -22,9 +23,9 @@ public class BobberWaterControl : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeRotation;
 
             // Keep bobber at water surface
-            Vector3 pos = rb.position;
-            pos.y = waterLevel + floatOffset;
-            rb.position = pos;
+            //Vector3 pos = rb.position;
+            //pos.y = waterLevel + floatOffset;
+            //rb.position = pos;
 
             // Optional: zero velocity to avoid sinking
             rb.linearVelocity = Vector3.zero;
@@ -35,12 +36,12 @@ public class BobberWaterControl : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collision.collider.CompareTag("Water"))
+        if (collider.CompareTag("Water"))
         {
             inWater = true;
-            waterLevel = collision.contacts[0].point.y; // Y position where bobber touched water
+            canFloat = true;
             rb.useGravity = false;
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
@@ -50,6 +51,7 @@ public class BobberWaterControl : MonoBehaviour
     public void ExitWater()
     {
         inWater = false;
+        canFloat = false;
         rb.useGravity = true;
     }
 }

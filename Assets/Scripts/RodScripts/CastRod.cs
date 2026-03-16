@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class CastRod : MonoBehaviour
 {
     public PlayerMotor motor;
+    public CatchFish catchFish;
 
     public GameObject playerCam, bobber;
     public Transform bobberLocation;
@@ -94,7 +95,7 @@ public class CastRod : MonoBehaviour
         bobberTransform.SetParent(bobberCasted.transform);
 
         bobberRB.isKinematic = false;
-        bobberRB.linearVelocity = Vector3.zero;
+        //bobberRB.linearVelocity = Vector3.zero;
 
         bobberRB.AddForce(bobberLocation.forward * castForce, ForceMode.Impulse);
 
@@ -103,7 +104,7 @@ public class CastRod : MonoBehaviour
         castForce = 0;
     }
 
-    void Retract()
+    public void Retract()
     {
         Debug.Log("Retracted Rod!");
 
@@ -120,6 +121,7 @@ public class CastRod : MonoBehaviour
 
         isCasted = false;
         startReset = true;
+        catchFish.fishCaught = false;
 
         cooldownTimer = 0;
     }
