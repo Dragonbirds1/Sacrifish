@@ -94,8 +94,8 @@ public class WaterBuoyant : MonoBehaviour
         float difference = transform.position.y - waveY;
 
         // ALWAYS apply force toward the wave surface — both up AND down
-        // Negative difference = below water → force pushes UP
-        // Positive difference = above water → force pushes DOWN
+        // Negative difference = below water -> force pushes UP
+        // Positive difference = above water -> force pushes DOWN
         m_Rigidbody.AddForceAtPosition(
             Vector3.up * FloatingPower * -difference,
             transform.position,
