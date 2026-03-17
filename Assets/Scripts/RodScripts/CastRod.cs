@@ -35,7 +35,7 @@ public class CastRod : MonoBehaviour
     {
         //bobberRB.isKinematic = true;
         //bobberTransform.SetParent(playerCam.transform);
-        bobberTransform.position = bobberLocation.position;
+        //bobberTransform.position = bobberLocation.position;
     }
 
     void Update()

@@ -25,7 +25,7 @@ public class GetGround : MonoBehaviour
             if (collision.collider.CompareTag("Ground"))
             {
                 bobberRB.linearVelocity = Vector3.zero;
-                bobberRB.isKinematic = true;
+                //bobberRB.isKinematic = true;
             }
         }
     }
