@@ -7,6 +7,7 @@ public class CatchFish : MonoBehaviour
 {
     public CastRod castRod;
     public BobberWaterControl bobberWaterControl;
+    public CatchMinigame catchMinigame;
     public TMP_InputField luckInputField;
     public float timeTillCatch; // Timer Floats
     public float rodCatchTime; // Object Floats
@@ -44,7 +45,6 @@ public class CatchFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (bobberWaterControl.inWater == true)
         {
             timeTillCatch += Time.deltaTime;
@@ -55,7 +55,7 @@ public class CatchFish : MonoBehaviour
                     float luck = playerLuck + rodBonus + baitBonus; // = 0.2f
 
                     string fish = RollFish(currentZone.rarities, luck);
-                    Debug.Log("Caught a " + fishRarityName + " Fish");
+                    
                     fishCaught = true;
                 }
                 timeTillCatch = 0;
@@ -94,9 +94,11 @@ public class CatchFish : MonoBehaviour
         {
             cumulative += modified[i];
             if (roll <= cumulative)
+            {
+                Debug.Log("A " + rarities[i].name + " Fish is on your line");
                 return rarities[i].name;
+            }
         }
-
         return rarities[0].name;
     }
 }
