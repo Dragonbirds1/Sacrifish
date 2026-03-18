@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Ground
   - Water
+  - CrownIsland
+  - Ocean
+  - ButtonCavern
+  - ForgottenJungle
+  - EternalIslandDesert
+  - ToxicGrowth
+  - EternalIslandIcy
+  - ScorchingDeep
+  - NorthPole
+  - MutatedAbyss
   layers:
   - Default
   - TransparentFX

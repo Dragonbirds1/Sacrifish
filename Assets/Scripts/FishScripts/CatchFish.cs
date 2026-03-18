@@ -1,17 +1,39 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class CatchFish : MonoBehaviour
 {
     public CastRod castRod;
     public BobberWaterControl bobberWaterControl;
+    public TMP_InputField luckInputField;
     public float timeTillCatch; // Timer Floats
     public float rodCatchTime; // Object Floats
     public bool fishCaught;
-    public float commonChance, uncommonChance, rareChance, superRareChance;
-    public float epicChance, legendaryChance, mythicChance, godlyChance, divineChance, secretChance;
-    public string fishRarityName, commonFishName, uncommonFishName, rareFishName, superRareFishName;
-    public string epicFishName, legendaryFishName, mythicFishName, godlyFishName, divineFishName, secretFishName;
+    public bool isDevRod;
+    public string fishRarityName;
+
+    [System.Serializable]
+    public class FishRarity
+    {
+        public string name;
+        public float chance; // percent
+    }
+
+    [System.Serializable]
+    public class FishingZone
+    {
+        public string zoneName;
+        public FishRarity[] rarities;
+    }
+
+    public FishingZone[] zones;
+    public FishingZone currentZone;
+
+    public float playerLuck; // = 0.1f;
+    public float rodBonus; // = 0.05f;
+    public float baitBonus; // = 0.05f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +44,7 @@ public class CatchFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (bobberWaterControl.inWater == true)
         {
             timeTillCatch += Time.deltaTime;
@@ -29,48 +52,9 @@ public class CatchFish : MonoBehaviour
             {
                 if (fishCaught == false)
                 {
-                    float fishRarity = Random.Range(0f, 1f);
-                    if (fishRarity <= commonChance && fishRarity > uncommonChance)
-                    {
-                        fishRarityName = commonFishName;
-                    }
-                    else if (fishRarity <= uncommonChance && fishRarity > rareChance)
-                    {
-                        fishRarityName = uncommonFishName;
-                    }
-                    else if (fishRarity <= rareChance && fishRarity > superRareChance)
-                    {
-                        fishRarityName = rareFishName;
-                    }
-                    else if (fishRarity <= superRareChance && fishRarity > epicChance)
-                    {
-                        fishRarityName = superRareFishName;
-                    }
-                    else if (fishRarity <= epicChance && fishRarity > legendaryChance)
-                    {
-                        fishRarityName = epicFishName;
-                    }
-                    else if (fishRarity <= legendaryChance && fishRarity > mythicChance)
-                    {
-                        fishRarityName = legendaryFishName;
-                    }
-                    else if (fishRarity <= mythicChance && fishRarity > godlyChance)
-                    {
-                        fishRarityName = mythicFishName;
-                    }
-                    else if (fishRarity <= godlyChance && fishRarity > divineChance)
-                    {
-                        fishRarityName = godlyFishName;
-                    }
-                    else if (fishRarity <= divineChance && fishRarity > secretChance)
-                    {
-                        fishRarityName = divineFishName;
-                    }
-                    else if (fishRarity <= secretChance)
-                    {
-                        fishRarityName = secretFishName;
-                    }
-                    
+                    float luck = playerLuck + rodBonus + baitBonus; // = 0.2f
+
+                    string fish = RollFish(currentZone.rarities, luck);
                     Debug.Log("Caught a " + fishRarityName + " Fish");
                     fishCaught = true;
                 }
@@ -78,5 +62,41 @@ public class CatchFish : MonoBehaviour
                 castRod.Retract();
             }
         }
+    }
+
+    string RollFish(FishRarity[] rarities, float luckMultiplier)
+    {
+        float total = 0f;
+
+        // Create modified chances
+        float[] modified = new float[rarities.Length];
+
+        for (int i = 0; i < rarities.Length; i++)
+        {
+            float weight = rarities[i].chance;
+
+            // 🎯 Key idea:
+            // Lower tiers get reduced, higher tiers get boosted
+            float rarityFactor = (float)i / (rarities.Length - 1);
+
+            // Apply luck curve
+            weight *= Mathf.Lerp(1f - luckMultiplier, 1f + luckMultiplier, rarityFactor);
+
+            modified[i] = weight;
+            total += weight;
+        }
+
+        // Normalize + roll
+        float roll = Random.value * total;
+        float cumulative = 0f;
+
+        for (int i = 0; i < modified.Length; i++)
+        {
+            cumulative += modified[i];
+            if (roll <= cumulative)
+                return rarities[i].name;
+        }
+
+        return rarities[0].name;
     }
 }
