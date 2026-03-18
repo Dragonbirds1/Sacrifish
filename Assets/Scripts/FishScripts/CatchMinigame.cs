@@ -2,45 +2,62 @@ using UnityEngine;
 
 public class CatchMinigame : MonoBehaviour
 {
-    public GameObject catchBar;
-    public GameObject fishBar;
-    public GameObject smallBar;
     public RectTransform smallBarRect;
-    public float X, speed;
-    public bool increasing, decreasing;
+
+    public float X;
+    public float velocity;
+
+    public float gravity = 2000f;
+    public float holdForce = 3000f;
+    public float maxSpeed = 1200f;
+
+    public float minX = -422f;
+    public float maxX = 422f;
+
+    public float bounceDamping = 0.5f; // 1 = perfect bounce, <1 loses energy
+
     public KeyCode moveSmallBarKey;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-    }
+    public bool canControl = false;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(moveSmallBarKey))
+        if (canControl)
         {
-            decreasing = false;
-            X += Time.deltaTime * speed;
-            smallBarRect.anchoredPosition = new Vector2(X, smallBarRect.anchoredPosition.y);
-            if (X >= 422f)
+            // APPLY FORCES
+            if (Input.GetKey(moveSmallBarKey))
             {
-                X = 422f;
+                velocity += holdForce * Time.deltaTime;
             }
-        }
-        else if (Input.GetKeyUp(moveSmallBarKey))
-        {
-            decreasing = true;
-        }
+            else
+            {
+                velocity -= gravity * Time.deltaTime;
+            }
 
-        if (decreasing)
-        {
-            X -= Time.deltaTime * speed;
-            smallBarRect.anchoredPosition = new Vector2(X, smallBarRect.anchoredPosition.y);
-            if (X <= -422f)
+            // Clamp velocity
+            velocity = Mathf.Clamp(velocity, -maxSpeed, maxSpeed);
+
+            // Move
+            X += velocity * Time.deltaTime;
+
+            // Clamp position (NO bounce, just stop)
+            if (X > maxX)
             {
-                X = -422f;
+                X = maxX;
+                velocity = -velocity * bounceDamping; // reverse + dampen
             }
+            else if (X < minX)
+            {
+                X = minX;
+                velocity = -velocity * bounceDamping;
+            }
+
+            // Apply position
+            smallBarRect.anchoredPosition = new Vector2(X, smallBarRect.anchoredPosition.y);
+        }
+        else if (!canControl)
+        {
+            return;
         }
     }
 }

@@ -10,6 +10,7 @@ public class CastRod : MonoBehaviour
     public Transform bobberLocation;
     public Transform bobberTransform;
     public GameObject bobberCasted;
+    public GameObject forceBar;
 
     public Rigidbody bobberRB;
 
@@ -27,6 +28,8 @@ public class CastRod : MonoBehaviour
     public bool isCasted;
     public bool canCast = true;
     public bool startReset;
+    public bool canCharge;
+    public bool canRetract;
 
     float chargeDir = 1f;
     float cooldownTimer;
@@ -36,6 +39,7 @@ public class CastRod : MonoBehaviour
         //bobberRB.isKinematic = true;
         //bobberTransform.SetParent(playerCam.transform);
         //bobberTransform.position = bobberLocation.position;
+        forceBar.SetActive(false);
     }
 
     void Update()
@@ -61,22 +65,27 @@ public class CastRod : MonoBehaviour
 
     void HandleCharging()
     {
-        if (Input.GetKey(castKey))
+        if (canCharge)
         {
-            isCharging = true;
-
-            castForce += chargeDir * chargeSpeed * Time.deltaTime;
-
-            if (castForce >= maxCastForce)
+            if (Input.GetKey(castKey))
             {
-                castForce = maxCastForce;
-                chargeDir = -1;
-            }
+                forceBar.SetActive(true);
 
-            if (castForce <= minCastForce)
-            {
-                castForce = minCastForce;
-                chargeDir = 1;
+                isCharging = true;
+
+                castForce += chargeDir * chargeSpeed * Time.deltaTime;
+
+                if (castForce >= maxCastForce)
+                {
+                    castForce = maxCastForce;
+                    chargeDir = -1;
+                }
+
+                if (castForce <= minCastForce)
+                {
+                    castForce = minCastForce;
+                    chargeDir = 1;
+                }
             }
         }
     }
@@ -86,11 +95,14 @@ public class CastRod : MonoBehaviour
         // When cast starts
         bobber.GetComponent<BobberDangling>().isCasted = true;
 
+        forceBar.SetActive(false);
+
         castForce = castForce + 10;
 
         isCharging = false;
         isCasted = true;
         canCast = false;
+        canCharge = false;
 
         bobberTransform.SetParent(bobberCasted.transform);
 
@@ -106,24 +118,27 @@ public class CastRod : MonoBehaviour
 
     public void Retract()
     {
-        Debug.Log("Retracted Rod!");
+        if (canRetract)
+        {
+            Debug.Log("Retracted Rod!");
 
-        // When retracted
-        bobber.GetComponent<BobberDangling>().isCasted = false;
+            // When retracted
+            bobber.GetComponent<BobberDangling>().isCasted = false;
 
-        bobber.GetComponent<BobberWaterControl>().ExitWater();
+            bobber.GetComponent<BobberWaterControl>().ExitWater();
 
-        //bobberRB.isKinematic = true;
-        //bobberRB.linearVelocity = Vector3.zero;
+            //bobberRB.isKinematic = true;
+            //bobberRB.linearVelocity = Vector3.zero;
 
-        //bobberTransform.SetParent(playerCam.transform);
-        //bobberTransform.position = bobberLocation.position;
+            //bobberTransform.SetParent(playerCam.transform);
+            //bobberTransform.position = bobberLocation.position;
 
-        isCasted = false;
-        startReset = true;
-        catchFish.fishCaught = false;
+            isCasted = false;
+            startReset = true;
+            catchFish.fishCaught = false;
 
-        cooldownTimer = 0;
+            cooldownTimer = 0;
+        }
     }
 
     void UpdateCooldown()
@@ -135,6 +150,7 @@ public class CastRod : MonoBehaviour
             if (cooldownTimer >= 1.5f)
             {
                 canCast = true;
+                canCharge = true;
                 startReset = false;
                 cooldownTimer = 0;
             }

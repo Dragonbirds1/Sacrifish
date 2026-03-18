@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4873111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4873112}
+  - component: {fileID: 4873114}
+  - component: {fileID: 4873113}
+  m_Layer: 5
+  m_Name: ProgressBarSmackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4873112
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873111}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 142061444}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -484.86}
+  m_SizeDelta: {x: 1057.1, y: 70.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4873113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4af58cd12a8529b4aba7ac11451fba40, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &4873114
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873111}
+  m_CullTransparentMesh: 1
 --- !u!1 &142061443
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +226,9 @@ RectTransform:
   - {fileID: 1898801977}
   - {fileID: 608741632}
   - {fileID: 1813256976}
+  - {fileID: 1940726584}
+  - {fileID: 4873112}
+  - {fileID: 1201148264}
   m_Father: {fileID: 965592612}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -774,6 +852,7 @@ MonoBehaviour:
   bobberLocation: {fileID: 1989682797}
   bobberTransform: {fileID: 2084117301}
   bobberCasted: {fileID: 1701644806}
+  forceBar: {fileID: 757941229}
   bobberRB: {fileID: 2084117297}
   fillForce: {fileID: 2135947547}
   castKey: 113
@@ -785,6 +864,8 @@ MonoBehaviour:
   isCasted: 0
   canCast: 1
   startReset: 0
+  canCharge: 1
+  canRetract: 1
 --- !u!114 &372227909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2055,15 +2136,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castRod: {fileID: 372227908}
   bobberWaterControl: {fileID: 2084117308}
-  catchMinigame: {fileID: 0}
+  catchMinigame: {fileID: 1763307812}
+  fishBarAI: {fileID: 1763307816}
   luckInputField: {fileID: 1084872227}
+  catchBar: {fileID: 142061443}
   timeTillCatch: 0
   rodCatchTime: 5
   fishCaught: 0
   isDevRod: 1
+  fishOnLine: 0
   fishRarityName: 
   zones:
   - zoneName: Crown Island
+    difficulty: 1
     rarities:
     - name: Common
       chance: 0.55
@@ -2078,6 +2163,7 @@ MonoBehaviour:
     - name: Legendary
       chance: 0.005
   - zoneName: Ocean
+    difficulty: 1.5
     rarities:
     - name: Common
       chance: 0.5
@@ -2100,6 +2186,7 @@ MonoBehaviour:
     - name: Secret
       chance: 0.003
   - zoneName: Button Cavern
+    difficulty: 2
     rarities:
     - name: Common
       chance: 0.45
@@ -2118,6 +2205,7 @@ MonoBehaviour:
     - name: Godly
       chance: 0
   - zoneName: Forgotten Jungle
+    difficulty: 3
     rarities:
     - name: Common
       chance: 0.38
@@ -2140,6 +2228,7 @@ MonoBehaviour:
     - name: Secret
       chance: 0.003
   - zoneName: Eternal Island Desert
+    difficulty: 4
     rarities:
     - name: Common
       chance: 0.34
@@ -2160,6 +2249,7 @@ MonoBehaviour:
     - name: Secret
       chance: 0.025
   - zoneName: Toxic Growth
+    difficulty: 5
     rarities:
     - name: Common
       chance: 0.3
@@ -2180,6 +2270,7 @@ MonoBehaviour:
     - name: Divine
       chance: 0.04
   - zoneName: Enernal Island Icy
+    difficulty: 6
     rarities:
     - name: Common
       chance: 0.27
@@ -2200,6 +2291,7 @@ MonoBehaviour:
     - name: Secret
       chance: 0.04
   - zoneName: Scorching Deep
+    difficulty: 7
     rarities:
     - name: Common
       chance: 0.24
@@ -2216,6 +2308,7 @@ MonoBehaviour:
     - name: Secret
       chance: 0.2
   - zoneName: North Pole
+    difficulty: 8
     rarities:
     - name: Common
       chance: 0.22
@@ -2232,6 +2325,7 @@ MonoBehaviour:
     - name: Secret
       chance: 0.24
   - zoneName: Mutated Abyss
+    difficulty: 10
     rarities:
     - name: Common
       chance: 0.18
@@ -2253,6 +2347,7 @@ MonoBehaviour:
       chance: 0.07
   currentZone:
     zoneName: 
+    difficulty: 0
     rarities: []
   playerLuck: 0
   rodBonus: 0
@@ -3696,6 +3791,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1201148263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201148264}
+  - component: {fileID: 1201148266}
+  - component: {fileID: 1201148265}
+  m_Layer: 5
+  m_Name: ProgressBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1201148264
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201148263}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 142061444}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -484.86}
+  m_SizeDelta: {x: 1057.1, y: 70.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1201148265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201148263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.018313082, g: 0.4433962, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4af58cd12a8529b4aba7ac11451fba40, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1201148266
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201148263}
+  m_CullTransparentMesh: 1
 --- !u!1 &1211462334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,6 +4825,7 @@ GameObject:
   - component: {fileID: 1763307814}
   - component: {fileID: 1763307813}
   - component: {fileID: 1763307812}
+  - component: {fileID: 1763307816}
   m_Layer: 0
   m_Name: DevRodCatchMinigame
   m_TagString: Untagged
@@ -4689,15 +4860,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c86a37f9d9a1a4fb308d78d1ee6d16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  catchBar: {fileID: 142061443}
-  fishBar: {fileID: 1813256975}
-  smallBar: {fileID: 608741631}
   smallBarRect: {fileID: 608741632}
   X: 0
-  speed: 50
-  increasing: 0
-  decreasing: 0
+  velocity: 0
+  gravity: 2000
+  holdForce: 3000
+  maxSpeed: 1000
+  minX: -422
+  maxX: 422
+  bounceDamping: 0.5
   moveSmallBarKey: 323
+  canControl: 0
 --- !u!135 &1763307813
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4772,6 +4945,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763307810}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1763307816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763307810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba1fadafa7a3ae4b8da70d9d5c16b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catchFish: {fileID: 888069997}
+  catchMinigame: {fileID: 1763307812}
+  castRod: {fileID: 372227908}
+  catchBar: {fileID: 142061443}
+  currentZone:
+    zoneName: 
+    difficulty: 0
+    rarities: []
+  fishRarity: 
+  fishRect: {fileID: 1813256976}
+  smallBarRect: {fileID: 608741632}
+  progressBar: {fileID: 1201148265}
+  X: 0
+  velocity: 0
+  minX: -422
+  maxX: 422
+  timeTillStart: 0
+  startMinigame: 0
+  alreadyAt10: 0
+  progress: 0
+  progressSpeed: 30
 --- !u!1 &1813256975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5030,6 +5236,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1940726583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940726584}
+  - component: {fileID: 1940726586}
+  - component: {fileID: 1940726585}
+  m_Layer: 5
+  m_Name: ProgressBarBackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1940726584
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940726583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 142061444}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -484.86}
+  m_SizeDelta: {x: 1071.4, y: 86.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1940726585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940726583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4af58cd12a8529b4aba7ac11451fba40, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1940726586
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940726583}
+  m_CullTransparentMesh: 1
 --- !u!1 &1967189948
 GameObject:
   m_ObjectHideFlags: 0

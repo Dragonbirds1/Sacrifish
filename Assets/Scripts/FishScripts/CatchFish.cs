@@ -8,26 +8,15 @@ public class CatchFish : MonoBehaviour
     public CastRod castRod;
     public BobberWaterControl bobberWaterControl;
     public CatchMinigame catchMinigame;
+    public FishBarAI fishBarAI;
     public TMP_InputField luckInputField;
+    public GameObject catchBar;
     public float timeTillCatch; // Timer Floats
     public float rodCatchTime; // Object Floats
     public bool fishCaught;
     public bool isDevRod;
+    public bool fishOnLine;
     public string fishRarityName;
-
-    [System.Serializable]
-    public class FishRarity
-    {
-        public string name;
-        public float chance; // percent
-    }
-
-    [System.Serializable]
-    public class FishingZone
-    {
-        public string zoneName;
-        public FishRarity[] rarities;
-    }
 
     public FishingZone[] zones;
     public FishingZone currentZone;
@@ -39,7 +28,7 @@ public class CatchFish : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        catchBar.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,12 +43,11 @@ public class CatchFish : MonoBehaviour
                 {
                     float luck = playerLuck + rodBonus + baitBonus; // = 0.2f
 
-                    string fish = RollFish(currentZone.rarities, luck);
+                    CatchTheFish();
                     
                     fishCaught = true;
                 }
                 timeTillCatch = 0;
-                castRod.Retract();
             }
         }
     }
@@ -101,4 +89,36 @@ public class CatchFish : MonoBehaviour
         }
         return rarities[0].name;
     }
+
+    void CatchTheFish()
+    {
+        fishOnLine = true;
+
+        catchBar.SetActive(true);
+
+        float luck = 0f;
+
+        // 🎲 Roll rarity from zone
+        string rarity = RollFish(currentZone.rarities, luck);
+
+        // 🎣 Get FishBarAI (your minigame)
+        fishBarAI.Setup(currentZone, rarity);
+
+        Debug.Log("Caught: " + rarity + " fish in " + currentZone.zoneName);
+    }
+}
+
+[System.Serializable]
+public class FishRarity
+{
+    public string name;
+    public float chance; // percent
+}
+
+[System.Serializable]
+public class FishingZone
+{
+    public string zoneName;
+    public float difficulty;
+    public FishRarity[] rarities;
 }
