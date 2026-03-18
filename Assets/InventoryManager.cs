@@ -30,6 +30,6 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(string itemName, int quantity, Sprite sprite)
     {
         // Implement logic to add the item to the inventory UI
-        Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = " + itemSprite);
+        Debug.Log("itemName = " + itemName + "quantity = " + quantity + "itemSprite = "); //+ itemSprite);
     }
 }
