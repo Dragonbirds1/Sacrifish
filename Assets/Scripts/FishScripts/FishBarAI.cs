@@ -25,6 +25,8 @@ public class FishBarAI : MonoBehaviour
     public float velocity;
     public float minX = -422f;
     public float maxX = 422f;
+    public float originalPosX;
+    public float originalPosY;
 
     private float moveSpeed;
     private float acceleration;
@@ -58,6 +60,10 @@ public class FishBarAI : MonoBehaviour
             {
                 castRod.canRetract = false;
                 progress += 10 * Time.deltaTime;
+                fishRect.anchoredPosition = new Vector2(originalPosX, originalPosY);
+                smallBarRect.anchoredPosition = new Vector2(originalPosX, originalPosY);
+                X = 0;
+                catchMinigame.X = 0;
                 if (progress >= 10)
                 {
                     alreadyAt10 = true;
@@ -113,6 +119,7 @@ public class FishBarAI : MonoBehaviour
                 catchBar.SetActive(false);
                 castRod.canRetract = true;
                 castRod.Retract();
+                catchFish.timeTillCatch = 0;
             }
             else if (progress <= 0f)
             {
@@ -124,6 +131,7 @@ public class FishBarAI : MonoBehaviour
                 catchBar.SetActive(false);
                 castRod.canRetract = true;
                 castRod.Retract();
+                catchFish.timeTillCatch = 0;
             }
         }
     }
