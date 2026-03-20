@@ -1,13 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class SwapRods : MonoBehaviour
 {
     public BobberDangling bobberDangling;
+    public BobberOnLine bobberOnLine;
+    public BobberHanging bobberHanging;
+    public FishingLineRenderer fishingLineRenderer;
 
-    public KeyCode rodSwapKey;
+    public KeyCode rodSwapKey, rodSwapKey2;
 
     public Rods[] rods;
     public Rods currentRod;
@@ -23,19 +28,38 @@ public class SwapRods : MonoBehaviour
     {
         SwapRod();
         bobberDangling.rodTip = currentRod.rodTip;
+        bobberOnLine.rodTip = currentRod.rodTip;
+        bobberHanging.rodTip = currentRod.rodTip;
+        fishingLineRenderer.rodTip = currentRod.rodTip;
+        currentRod.rodModel.SetActive(true);
+        currentRod.isRod = true;
+        foreach (var rods in rods)
+        {
+            if (rods.isRod == false)
+            {
+                rods.rodModel.SetActive(false);
+            }
+        }
     }
 
     public void SwapRod()
     {
         if (Input.GetKeyDown(rodSwapKey))
         {
-            
+            currentRod = rods[1];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
         }
-    }
-
-    string ActiveRod(RodInfo[] rodInfo)
-    {
-        return rodInfo[0].name;
+        if (Input.GetKeyDown(rodSwapKey2))
+        {
+            currentRod = rods[0];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
     }
 }
 
@@ -44,13 +68,7 @@ public class Rods
 {
     public Transform rodTip;
     public GameObject rodModel;
-    public RodInfo[] rodInfo;
-    
-}
-
-[System.Serializable]
-public class RodInfo
-{
     public string name;
     public float rodId;
+    public bool isRod;
 }
