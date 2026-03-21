@@ -12,7 +12,7 @@ public class SwapRods : MonoBehaviour
     public BobberHanging bobberHanging;
     public FishingLineRenderer fishingLineRenderer;
 
-    public KeyCode rodSwapKey, rodSwapKey2;
+    public KeyCode rodSwapKey, rodSwapKey2, rodSwapKey3; // This is for testing purposes, there will be no keycodes when finished.
 
     public Rods[] rods;
     public Rods currentRod;
@@ -60,6 +60,14 @@ public class SwapRods : MonoBehaviour
                 rods.isRod = false;
             }
         }
+        if (Input.GetKeyDown(rodSwapKey3))
+        {
+            currentRod = rods[2];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false; 
+            }
+        }
     }
 }
 
@@ -68,6 +76,7 @@ public class Rods
 {
     public Transform rodTip;
     public GameObject rodModel;
+    public Animator rodCastAnimator;
     public string name;
     public float rodId;
     public bool isRod;

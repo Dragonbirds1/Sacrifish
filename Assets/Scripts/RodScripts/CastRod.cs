@@ -5,6 +5,7 @@ public class CastRod : MonoBehaviour
 {
     public PlayerMotor motor;
     public CatchFish catchFish;
+    public SwapRods swapRods;
 
     public GameObject playerCam, bobber;
     public Transform bobberLocation;
@@ -73,6 +74,8 @@ public class CastRod : MonoBehaviour
 
                 isCharging = true;
 
+                swapRods.currentRod.rodCastAnimator.SetBool("ReadyToCast", true);
+
                 castForce += chargeDir * chargeSpeed * Time.deltaTime;
 
                 if (castForce >= maxCastForce)
@@ -103,6 +106,8 @@ public class CastRod : MonoBehaviour
         isCasted = true;
         canCast = false;
         canCharge = false;
+
+        swapRods.currentRod.rodCastAnimator.SetBool("ReadyToCast", false);
 
         bobberTransform.SetParent(bobberCasted.transform);
 
