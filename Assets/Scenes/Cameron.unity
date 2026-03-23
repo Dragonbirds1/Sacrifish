@@ -867,7 +867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &112417683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1052,7 +1052,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 117134485}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: Abyss
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &117134485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2674,7 +2686,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 270277278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: Icy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &270277278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4727,7 +4751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459128550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7214,7 +7238,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 679437893}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ButtonCavern
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &679437893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8069,7 +8105,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 750016841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: Crown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &750016841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9303,17 +9351,17 @@ MonoBehaviour:
   - {fileID: 2052938255}
   - {fileID: 1003308695}
   - {fileID: 985117175}
-  desertSecret: {fileID: 0}
-  icySecret: {fileID: 0}
-  jungleSecret: {fileID: 0}
-  northPoleSecret: {fileID: 0}
-  outline1: {fileID: 0}
-  outline2: {fileID: 0}
-  outline3: {fileID: 0}
-  outline4: {fileID: 0}
-  outline5: {fileID: 0}
-  outline6: {fileID: 0}
-  outline7: {fileID: 0}
+  desertSecret: {fileID: 1282750815}
+  icySecret: {fileID: 1720709876}
+  jungleSecret: {fileID: 847072053}
+  northPoleSecret: {fileID: 907248826}
+  outline1: {fileID: 1492669996}
+  outline2: {fileID: 287712530}
+  outline3: {fileID: 309175930}
+  outline4: {fileID: 720632519}
+  outline5: {fileID: 1235224316}
+  outline6: {fileID: 503560572}
+  outline7: {fileID: 1289654028}
 --- !u!4 &857347404
 Transform:
   m_ObjectHideFlags: 0
@@ -17803,7 +17851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1338525575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18860,7 +18908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1446503639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20197,7 +20245,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1552216581}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: Jungle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1552216581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24197,7 +24257,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1818353847}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: Desert
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1818353847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24635,7 +24707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1865728332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25349,7 +25421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1932047146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27702,7 +27774,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2087211487}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: Pole
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2087211487
 MonoBehaviour:
   m_ObjectHideFlags: 0
