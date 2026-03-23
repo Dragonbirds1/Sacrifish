@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: glowMAT 1
+  m_Name: glowMAT 4
   m_Shader: {fileID: -6465566751694194690, guid: cf968cac3a5110e4e856e1ac72eff260,
     type: 3}
   m_Parent: {fileID: 0}
@@ -39,16 +39,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BottomLine: 0.574
+    - _BottomLine: 0.458
     - _Metalic: 0.551
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.551
-    - _TopLine: 0.242
+    - _TopLine: 0.475
     m_Colors:
-    - _Basecolor: {r: 3.3420475, g: 0.31057224, b: 4.237095, a: 0}
-    - _BottomColor: {r: 17.148375, g: 0.8897742, b: 0.8897742, a: 0}
-    - _TopColor: {r: 6.037269, g: 3.6039298, b: 6.883181, a: 0}
+    - _Basecolor: {r: 0.3823592, g: 0.63552105, b: 5.2164745, a: 0}
+    - _BottomColor: {r: 0.07511934, g: 0, b: 0.6666667, a: 0}
+    - _TopColor: {r: 2.480826, g: 1.4809216, b: 2.8284268, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3002967436638068306
