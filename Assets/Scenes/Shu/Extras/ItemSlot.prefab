@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 6619813088143779623}
   - component: {fileID: 2538778640279480472}
   m_Layer: 5
-  m_Name: Inventory Slot
+  m_Name: ItemSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,6 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5a63b7cd4e3c04ab6e761ccec738e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
+  quantity: 0
+  itemSprite: {fileID: 0}
+  isFull: 0
+  quantityText: {fileID: 9067707862691451388}
+  itemImage: {fileID: 345612782373121602}
 --- !u!1 &7803680335792605350
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +259,7 @@ GameObject:
   - component: {fileID: 4975401496038360819}
   - component: {fileID: 9067707862691451388}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: QuantityText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
