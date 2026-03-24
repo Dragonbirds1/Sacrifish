@@ -141,7 +141,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlowDirection: {r: 0, g: 0.5, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _color: {r: 0, g: 0.38059747, b: 0.9433962, a: 0}
-    - _color2: {r: 0, g: 0.101856075, b: 0.7735849, a: 0}
+    - _color: {r: 0.013216442, g: 0.13320036, b: 0.31132078, a: 0}
+    - _color2: {r: 0.028880388, g: 0.09852904, b: 0.5566038, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

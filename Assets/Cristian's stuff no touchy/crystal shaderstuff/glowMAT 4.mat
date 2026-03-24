@@ -44,11 +44,11 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.551
-    - _TopLine: 0.475
+    - _TopLine: 0.758
     m_Colors:
-    - _Basecolor: {r: 0.3823592, g: 0.63552105, b: 5.2164745, a: 0}
-    - _BottomColor: {r: 0.07511934, g: 0, b: 0.6666667, a: 0}
-    - _TopColor: {r: 2.480826, g: 1.4809216, b: 2.8284268, a: 0}
+    - _Basecolor: {r: 0, g: 0.06866934, b: 0.2305378, a: 0}
+    - _BottomColor: {r: 1, g: 1, b: 1, a: 0}
+    - _TopColor: {r: 4.8778834, g: 0, b: 5.0414853, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3002967436638068306
