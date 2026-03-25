@@ -201,7 +201,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1291202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetEpicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1291202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &23837050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -735,7 +771,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 54695255}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetLegendaryFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &54695255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2114,6 +2186,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ResetRarities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &117134485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,7 +3553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &181844363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3861,7 +3945,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 191599510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetLegendaryFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &191599510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4229,7 +4349,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 208812049}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetEpicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &208812049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5449,7 +5605,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 263521122}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetCommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &263521122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5574,6 +5754,18 @@ MonoBehaviour:
       - m_Target: {fileID: 857347403}
         m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
         m_MethodName: Icy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ResetRarities
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7463,7 +7655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &345985260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7722,7 +7914,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 350745759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetUncommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &350745759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8520,7 +8748,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 386289158}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &386289158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10446,7 +10710,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 521698647}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetLegendaryFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &521698647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11586,7 +11886,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 565752998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetMythicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &565752998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12201,7 +12537,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 596734437}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSuperRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &596734437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12464,7 +12836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &605609930
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13463,7 +13835,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 661705648}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetGodlyFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &661705648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13833,6 +14241,18 @@ MonoBehaviour:
       - m_Target: {fileID: 857347403}
         m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
         m_MethodName: ButtonCavern
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ResetRarities
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14313,7 +14733,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 687970730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetGodlyFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &687970730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14506,7 +14962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &698015516
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14624,7 +15080,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 698582880}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSuperRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &698582880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15100,6 +15592,18 @@ MonoBehaviour:
       - m_Target: {fileID: 857347403}
         m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
         m_MethodName: Crown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ResetRarities
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15660,7 +16164,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 770695192}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetCommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &770695192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15926,7 +16454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &779346901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16181,7 +16709,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804122337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetLegendaryFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &804122337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16838,7 +17390,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 847072056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSecretFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &847072056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17104,16 +17680,75 @@ MonoBehaviour:
   - {fileID: 2052938255}
   - {fileID: 1003308695}
   - {fileID: 985117175}
-  common: {fileID: 0}
-  uncommon: {fileID: 0}
-  rare: {fileID: 0}
-  superRare: {fileID: 0}
-  epic: {fileID: 0}
-  legendary: {fileID: 0}
-  mythic: {fileID: 0}
-  godly: {fileID: 0}
-  divine: {fileID: 0}
-  secret: {fileID: 0}
+  rarityButtons:
+  - {fileID: 1431757072}
+  - {fileID: 1159249935}
+  - {fileID: 1498870320}
+  - {fileID: 1740021293}
+  - {fileID: 1443315428}
+  - {fileID: 804122334}
+  - {fileID: 1213474037}
+  - {fileID: 1602990054}
+  - {fileID: 1087729170}
+  - {fileID: 2127551867}
+  - {fileID: 386289155}
+  - {fileID: 596734434}
+  - {fileID: 1095753226}
+  - {fileID: 54695252}
+  - {fileID: 1793302918}
+  - {fileID: 1770414845}
+  - {fileID: 1205036082}
+  - {fileID: 1852824200}
+  - {fileID: 1291199}
+  - {fileID: 919549327}
+  - {fileID: 565752995}
+  - {fileID: 687970727}
+  - {fileID: 1282750815}
+  - {fileID: 263521119}
+  - {fileID: 1836534794}
+  - {fileID: 1082793377}
+  - {fileID: 1582861505}
+  - {fileID: 208812046}
+  - {fileID: 521698644}
+  - {fileID: 878153647}
+  - {fileID: 1496529975}
+  - {fileID: 1720709876}
+  - {fileID: 770695189}
+  - {fileID: 1069554655}
+  - {fileID: 1961724514}
+  - {fileID: 698582877}
+  - {fileID: 1791764625}
+  - {fileID: 1907426776}
+  - {fileID: 1337117558}
+  - {fileID: 661705645}
+  - {fileID: 1535167678}
+  - {fileID: 847072053}
+  - {fileID: 1125630815}
+  - {fileID: 350745756}
+  - {fileID: 1154291707}
+  - {fileID: 1763024312}
+  - {fileID: 1130122359}
+  - {fileID: 191599507}
+  - {fileID: 2146309282}
+  - {fileID: 1906750958}
+  - {fileID: 1534647291}
+  - {fileID: 1558046117}
+  - {fileID: 1295875389}
+  - {fileID: 864981780}
+  - {fileID: 2052938255}
+  - {fileID: 1003308695}
+  - {fileID: 985117175}
+  - {fileID: 907248826}
+  common: {fileID: 779346900}
+  uncommon: {fileID: 1206694823}
+  rare: {fileID: 1123492142}
+  superRare: {fileID: 605609929}
+  epic: {fileID: 2114031193}
+  legendary: {fileID: 698015515}
+  mythic: {fileID: 181844362}
+  godly: {fileID: 345985259}
+  divine: {fileID: 23837049}
+  secret: {fileID: 1249382689}
   desertSecret: {fileID: 1282750815}
   icySecret: {fileID: 1720709876}
   jungleSecret: {fileID: 847072053}
@@ -17139,6 +17774,9 @@ MonoBehaviour:
   discovered5: 0
   discovered6: 0
   discovered7: 0
+  discovered8: 0
+  discovered9: 0
+  discovered10: 0
   buttonCav: 0
   crownIsle: 0
   eternalDes: 0
@@ -17153,66 +17791,76 @@ MonoBehaviour:
   setJungle: 0
   setAbyss: 0
   setPole: 0
-  fishNameCommon: {fileID: 0}
-  fishNameUncommon: {fileID: 0}
-  fishNameRare: {fileID: 0}
-  fishNameSuperRare: {fileID: 0}
-  fishNameEpic: {fileID: 0}
-  fishNameLegendary: {fileID: 0}
-  fishNameMythic: {fileID: 0}
-  fishNameGodly: {fileID: 0}
-  fishNameDivine: {fileID: 0}
-  fishNameSecret: {fileID: 0}
-  fishKgCommon: {fileID: 0}
-  fishKgUncommon: {fileID: 0}
-  fishKgRare: {fileID: 0}
-  fishKgSuperRare: {fileID: 0}
-  fishKgEpic: {fileID: 0}
-  fishKgLegendary: {fileID: 0}
-  fishKgMythic: {fileID: 0}
-  fishKgGodly: {fileID: 0}
-  fishKgDivine: {fileID: 0}
-  fishKgSecret: {fileID: 0}
-  perferedWeatherCommon: {fileID: 0}
-  perferedWeatherUncommon: {fileID: 0}
-  perferedWeatherRare: {fileID: 0}
-  perferedWeatherSuperRare: {fileID: 0}
-  perferedWeatherEpic: {fileID: 0}
-  perferedWeatherLegendary: {fileID: 0}
-  perferedWeatherMythic: {fileID: 0}
-  perferedWeatherGodly: {fileID: 0}
-  perferedWeatherDivine: {fileID: 0}
-  perferedWeatherSecret: {fileID: 0}
-  perferedTimeCommon: {fileID: 0}
-  perferedTimeUncommon: {fileID: 0}
-  perferedTimeRare: {fileID: 0}
-  perferedTimeSuperRare: {fileID: 0}
-  perferedTimeEpic: {fileID: 0}
-  perferedTimeLegendary: {fileID: 0}
-  perferedTimeMythic: {fileID: 0}
-  perferedTimeGodly: {fileID: 0}
-  perferedTimeDivine: {fileID: 0}
-  perferedTimeSecret: {fileID: 0}
-  perferedSeasonCommon: {fileID: 0}
-  perferedSeasonUncommon: {fileID: 0}
-  perferedSeasonRare: {fileID: 0}
-  perferedSeasonSuperRare: {fileID: 0}
-  perferedSeasonEpic: {fileID: 0}
-  perferedSeasonLegendary: {fileID: 0}
-  perferedSeasonMythic: {fileID: 0}
-  perferedSeasonGodly: {fileID: 0}
-  perferedSeasonDivine: {fileID: 0}
-  perferedSeasonSecret: {fileID: 0}
-  perferedBaitCommon: {fileID: 0}
-  perferedBaitUncommon: {fileID: 0}
-  perferedBaitRare: {fileID: 0}
-  perferedBaitSuperRare: {fileID: 0}
-  perferedBaitEpic: {fileID: 0}
-  perferedBaitLegendary: {fileID: 0}
-  perferedBaitMythic: {fileID: 0}
-  perferedBaitGodly: {fileID: 0}
-  perferedBaitDivine: {fileID: 0}
-  perferedBaitSecret: {fileID: 0}
+  fishNameCommon: {fileID: 1997990010}
+  fishNameUncommon: {fileID: 1921359312}
+  fishNameRare: {fileID: 256516999}
+  fishNameSuperRare: {fileID: 484046769}
+  fishNameEpic: {fileID: 295237383}
+  fishNameLegendary: {fileID: 1772801271}
+  fishNameMythic: {fileID: 1496174053}
+  fishNameGodly: {fileID: 1359318495}
+  fishNameDivine: {fileID: 950386502}
+  fishNameSecret: {fileID: 608762448}
+  fishLocationCommon: {fileID: 1256886737}
+  fishLocationUncommon: {fileID: 616481244}
+  fishLocationRare: {fileID: 108756134}
+  fishLocationSuperRare: {fileID: 1733373551}
+  fishLocationEpic: {fileID: 88913380}
+  fishLocationLegendary: {fileID: 2042609988}
+  fishLocationMythic: {fileID: 119796348}
+  fishLocationGodly: {fileID: 1802284130}
+  fishLocationDivine: {fileID: 1832316986}
+  fishLocationSecret: {fileID: 299621165}
+  fishKgCommon: {fileID: 1198348591}
+  fishKgUncommon: {fileID: 416006776}
+  fishKgRare: {fileID: 1193023378}
+  fishKgSuperRare: {fileID: 532738935}
+  fishKgEpic: {fileID: 134350913}
+  fishKgLegendary: {fileID: 555262016}
+  fishKgMythic: {fileID: 551889511}
+  fishKgGodly: {fileID: 1385226460}
+  fishKgDivine: {fileID: 1019242673}
+  fishKgSecret: {fileID: 778409175}
+  perferedWeatherCommon: {fileID: 1642152236}
+  perferedWeatherUncommon: {fileID: 1760290760}
+  perferedWeatherRare: {fileID: 1468703106}
+  perferedWeatherSuperRare: {fileID: 687753555}
+  perferedWeatherEpic: {fileID: 176296670}
+  perferedWeatherLegendary: {fileID: 80099486}
+  perferedWeatherMythic: {fileID: 1334411751}
+  perferedWeatherGodly: {fileID: 2072969783}
+  perferedWeatherDivine: {fileID: 1992964680}
+  perferedWeatherSecret: {fileID: 427534065}
+  perferedTimeCommon: {fileID: 1135780722}
+  perferedTimeUncommon: {fileID: 325999318}
+  perferedTimeRare: {fileID: 835149603}
+  perferedTimeSuperRare: {fileID: 1518302979}
+  perferedTimeEpic: {fileID: 1964996965}
+  perferedTimeLegendary: {fileID: 1004788869}
+  perferedTimeMythic: {fileID: 570398011}
+  perferedTimeGodly: {fileID: 670287813}
+  perferedTimeDivine: {fileID: 2092027370}
+  perferedTimeSecret: {fileID: 1867765554}
+  perferedSeasonCommon: {fileID: 1318609479}
+  perferedSeasonUncommon: {fileID: 226900462}
+  perferedSeasonRare: {fileID: 319440260}
+  perferedSeasonSuperRare: {fileID: 1075257289}
+  perferedSeasonEpic: {fileID: 1513811748}
+  perferedSeasonLegendary: {fileID: 300491479}
+  perferedSeasonMythic: {fileID: 1636355392}
+  perferedSeasonGodly: {fileID: 1268665213}
+  perferedSeasonDivine: {fileID: 1629884457}
+  perferedSeasonSecret: {fileID: 1260295147}
+  perferedBaitCommon: {fileID: 1914340887}
+  perferedBaitUncommon: {fileID: 1112948935}
+  perferedBaitRare: {fileID: 856973917}
+  perferedBaitSuperRare: {fileID: 1568493215}
+  perferedBaitEpic: {fileID: 2093996476}
+  perferedBaitLegendary: {fileID: 740375371}
+  perferedBaitMythic: {fileID: 101523922}
+  perferedBaitGodly: {fileID: 1781035975}
+  perferedBaitDivine: {fileID: 1696988334}
+  perferedBaitSecret: {fileID: 2016010271}
   fishName: 
   fishKg: 
   perferedWeather: 
@@ -17453,7 +18101,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 864981783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &864981783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17649,7 +18333,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 878153650}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetMythicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &878153650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18836,7 +19556,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 907248829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSecretFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &907248829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19233,7 +19977,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 919549330}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetLegendaryFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &919549330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20134,7 +20914,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 985117178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetLegendaryFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &985117178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20392,7 +21208,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1003308698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetEpicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1003308698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21425,7 +22277,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1069554658}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetUncommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1069554658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21793,7 +22681,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1082793380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1082793380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22127,7 +23051,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1087729173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetCommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1087729173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22338,7 +23286,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095753229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetEpicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1095753229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22712,7 +23696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1123492143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22830,7 +23814,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1125630818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetCommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1125630818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22951,7 +23959,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1130122362}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetEpicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1130122362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23467,7 +24511,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1154291710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1154291710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24507,7 +25587,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1159249938}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetUncommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1159249938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25617,7 +26721,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1205036085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1205036085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25671,7 +26811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1206694824
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25972,7 +27112,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1213474040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetMythicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1213474040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26683,7 +27847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1249382690
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27608,7 +28772,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1282750818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSecretFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1282750818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27979,7 +29167,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1295875392}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetUncommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1295875392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28864,7 +30088,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1337117561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetMythicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1337117561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30361,7 +31621,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1431757075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetCommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1431757075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30632,7 +31916,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1443315431}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetEpicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1443315431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31649,7 +32957,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1496529978}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetGodlyFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1496529978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31770,7 +33114,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1498870323}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1498870323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32659,7 +34027,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534647294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetDivineFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1534647294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32780,7 +34172,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1535167681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetDivineFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1535167681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33086,6 +34502,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ResetRarities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1552216581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33343,7 +34771,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1558046120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetCommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1558046120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34091,7 +35543,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1582861508}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSuperRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1582861508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34598,7 +36086,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1602990057}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetGodlyFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1602990057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36808,7 +38320,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1720709879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSecretFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1720709879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37101,7 +38637,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1740021296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSuperRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1740021296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37696,7 +39256,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1763024315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSuperRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1763024315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38210,7 +39806,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1770414848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetUncommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1770414848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38778,7 +40410,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1791764628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetEpicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1791764628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38899,7 +40567,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1793302921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetCommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1793302921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39280,6 +40972,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ResetRarities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1818353847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39537,7 +41241,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1836534797}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetUncommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1836534797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39658,7 +41398,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1852824203}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSuperRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1852824203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40538,7 +42314,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1906750961}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetGodlyFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1906750961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40659,7 +42471,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1907426779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetLegendaryFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1907426779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41617,7 +43465,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1961724517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1961724517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43759,7 +45643,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2052938258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetSuperRareFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2052938258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44812,6 +46732,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: ResetRarities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2087211487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45328,7 +47260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2114031194
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45688,7 +47620,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2127551870}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetUncommonFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2127551870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46133,7 +48101,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146309285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: HideRarityButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 857347403}
+        m_TargetAssemblyTypeName: FishtiaryManager, Assembly-CSharp
+        m_MethodName: SetMythicFishInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2146309285
 MonoBehaviour:
   m_ObjectHideFlags: 0
