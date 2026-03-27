@@ -16,6 +16,7 @@ TagManager:
   - ScorchingDeep
   - NorthPole
   - MutatedAbyss
+  - GreenCrabCage
   layers:
   - Default
   - TransparentFX
@@ -29,9 +30,9 @@ TagManager:
   - SmallBarThing
   - CanPlace
   - Player
-  - 
-  - 
-  - 
+  - CrabCage
+  - Bobber
+  - GreenCrabCage
   - 
   - 
   - 

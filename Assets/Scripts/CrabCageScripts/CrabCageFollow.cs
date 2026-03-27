@@ -9,6 +9,10 @@ public class CrabCageFollow : MonoBehaviour
 
     public GameObject greenCrabCage;
 
+    public GameObject player;
+
+    public GameObject crabCagePrefab;
+
     public MeshRenderer greenCrabCageRenderer;
 
     public Material originalMat, denyMat;
@@ -20,6 +24,8 @@ public class CrabCageFollow : MonoBehaviour
     public Vector3 mousePos;
 
     public Vector3 worldPos;
+
+    public KeyCode placeKey;
 
     public float distanceFromCamera;
 
@@ -44,6 +50,15 @@ public class CrabCageFollow : MonoBehaviour
     {
         greenCrabCage.transform.position = greenCrabCagePos;
 
+        // 1. Get the target position
+        Vector3 targetPosition = player.transform.position;
+
+        // 2. Set the target position's Y-coordinate to the current object's Y-coordinate
+        targetPosition.y = greenCrabCage.transform.position.y;
+
+        // 3. Use LookAt with the modified position
+        greenCrabCage.transform.LookAt(targetPosition);
+
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         
         RaycastHit hit;
@@ -66,6 +81,19 @@ public class CrabCageFollow : MonoBehaviour
         else
         {
             greenCrabCageRenderer.material = denyMat;
+            canPlace = false;
+        }
+
+        if (canPlace)
+        {
+            if (Input.GetKeyDown(placeKey))
+            {
+                Instantiate(crabCagePrefab, greenCrabCagePos, greenCrabCage.transform.rotation);
+            }
+        }
+        else if (!canPlace)
+        {
+            return;
         }
     }
 }
