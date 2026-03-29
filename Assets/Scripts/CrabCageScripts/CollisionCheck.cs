@@ -18,10 +18,18 @@ public class CollisionCheck : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("GreenCrabCage"))
+        if (other.gameObject.CompareTag("GreenCrabCage"))
         {
             crabCageFollow.canPlace = false;
-            crabCageFollow.greenCrabCageRenderer.material = crabCageFollow.denyMat;
+            crabCageFollow.colliding = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("GreenCrabCage"))
+        {
+            crabCageFollow.colliding = false;
         }
     }
 }

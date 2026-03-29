@@ -33,6 +33,8 @@ public class CrabCageFollow : MonoBehaviour
 
     public bool canPlace;
 
+    public bool colliding;
+
     private Camera mainCamera;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,9 +76,13 @@ public class CrabCageFollow : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, rayRange, waterLayerMask))
         {
-            greenCrabCageRenderer.material = originalMat;
             greenCrabCagePos = hit.point;
-            canPlace = true;
+
+            if (!colliding)
+            {
+                greenCrabCageRenderer.material = originalMat;
+                canPlace = true;
+            }
         }
         else
         {
@@ -93,7 +99,7 @@ public class CrabCageFollow : MonoBehaviour
         }
         else if (!canPlace)
         {
-            return;
+            greenCrabCageRenderer.material = denyMat;
         }
     }
 }
