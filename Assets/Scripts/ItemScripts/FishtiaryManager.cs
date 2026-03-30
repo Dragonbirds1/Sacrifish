@@ -15,9 +15,14 @@ public class FishtiaryManager : MonoBehaviour
     public List<GameObject> forgottenJungle;
     public List<GameObject> mutatedAbyss;
     public List<GameObject> northPole;
+    public List<GameObject> ocean;
+    public List<GameObject> sorchingDeep;
+    public List<GameObject> toxicGrowth;
 
     [Header("Other Lists")]
     public List<GameObject> rarityButtons;
+    public List<GameObject> page1Locations;
+    public List<GameObject> page2Locations;
 
     [Header("Rarities")]
     public GameObject common;
@@ -32,14 +37,14 @@ public class FishtiaryManager : MonoBehaviour
     public GameObject secret;
 
     [Header("GameObjects")]
-    public GameObject desertSecret, icySecret, jungleSecret, northPoleSecret;
-    public GameObject outline1, outline2, outline3, outline4, outline5, outline6, outline7;
+    public GameObject desertSecret, icySecret, jungleSecret, northPoleSecret, oceanSecret, scorchingDeepSecret;
+    public GameObject outline1, outline2, outline3, outline4, outline5, outline6, outline7, outline8, outline9, outline10;
     public GameObject coverBt, coverCr, coverDe, coverIc, coverJu, coverAb, coverPo;
 
     [Header("Bools")]
     public bool discovered1, discovered2, discovered3, discovered4, discovered5, discovered6, discovered7, discovered8, discovered9, discovered10;
-    public bool buttonCav, crownIsle, eternalDes, eternalIce, forgottenJun, mutatedAby, northPo;
-    public bool setButton, setCrown, setDesert, setIcy, setJungle, setAbyss, setPole;
+    public bool buttonCav, crownIsle, eternalDes, eternalIce, forgottenJun, mutatedAby, northPo, ocea, scorchingDe, toxicGr;
+    public bool setButton, setCrown, setDesert, setIcy, setJungle, setAbyss, setPole, setOcean, setSorching, setToxic;
 
     [Header("TMPObjects")]
     public TextMeshProUGUI fishNameCommon, fishNameUncommon, fishNameRare, fishNameSuperRare, fishNameEpic, fishNameLegendary, fishNameMythic, fishNameGodly, fishNameDivine, fishNameSecret;
@@ -60,6 +65,8 @@ public class FishtiaryManager : MonoBehaviour
         icySecret.SetActive(false);
         jungleSecret.SetActive(false);
         northPoleSecret.SetActive(false);
+        oceanSecret.SetActive(false);
+        scorchingDeepSecret.SetActive(false);
         outline1.SetActive(false);
         outline2.SetActive(false);
         outline3.SetActive(false);
@@ -67,6 +74,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(false);
         outline6.SetActive(false);
         outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         foreach (var gameObject in buttonCavern)
         {
             gameObject.SetActive(false);
@@ -92,6 +102,22 @@ public class FishtiaryManager : MonoBehaviour
             gameObject.SetActive(false);
         }
         foreach (var gameObject in northPole)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in page2Locations)
         {
             gameObject.SetActive(false);
         }
@@ -133,6 +159,18 @@ public class FishtiaryManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
         outline1.SetActive(true);
         outline2.SetActive(false);
         outline3.SetActive(false);
@@ -140,6 +178,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(false);
         outline6.SetActive(false);
         outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         setButton = true;
         setCrown = false;
         setDesert = false;
@@ -147,6 +188,9 @@ public class FishtiaryManager : MonoBehaviour
         setJungle = false;
         setAbyss = false;
         setPole = false;
+        setOcean = false;
+        setSorching = false;
+        setToxic = false;
     }
 
     public void Crown()
@@ -179,6 +223,18 @@ public class FishtiaryManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
         outline1.SetActive(false);
         outline2.SetActive(true);
         outline3.SetActive(false);
@@ -186,6 +242,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(false);
         outline6.SetActive(false);
         outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         setButton = false;
         setCrown = true;
         setDesert = false;
@@ -193,6 +252,9 @@ public class FishtiaryManager : MonoBehaviour
         setJungle = false;
         setAbyss = false;
         setPole = false;
+        setOcean = false;
+        setSorching = false;
+        setToxic = false;
     }
 
     public void Desert()
@@ -225,6 +287,18 @@ public class FishtiaryManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
         outline1.SetActive(false);
         outline2.SetActive(false);
         outline3.SetActive(true);
@@ -232,6 +306,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(false);
         outline6.SetActive(false);
         outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         setButton = false;
         setCrown = false;
         setDesert = true;
@@ -239,6 +316,9 @@ public class FishtiaryManager : MonoBehaviour
         setJungle = false;
         setAbyss = false;
         setPole = false;
+        setOcean = false;
+        setSorching = false;
+        setToxic = false;
     }
 
     public void Icy()
@@ -271,6 +351,18 @@ public class FishtiaryManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
         outline1.SetActive(false);
         outline2.SetActive(false);
         outline3.SetActive(false);
@@ -278,6 +370,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(false);
         outline6.SetActive(false);
         outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         setButton = false;
         setCrown = false;
         setDesert = false;
@@ -285,6 +380,9 @@ public class FishtiaryManager : MonoBehaviour
         setJungle = false;
         setAbyss = false;
         setPole = false;
+        setOcean = false;
+        setSorching = false;
+        setToxic = false;
     }
 
     public void Jungle()
@@ -317,6 +415,18 @@ public class FishtiaryManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
         outline1.SetActive(false);
         outline2.SetActive(false);
         outline3.SetActive(false);
@@ -324,6 +434,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(true);
         outline6.SetActive(false);
         outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         setButton = false;
         setCrown = false;
         setDesert = false;
@@ -331,6 +444,9 @@ public class FishtiaryManager : MonoBehaviour
         setJungle = true;
         setAbyss = false;
         setPole = false;
+        setOcean = false;
+        setSorching = false;
+        setToxic = false;
     }
 
     public void Abyss()
@@ -363,6 +479,18 @@ public class FishtiaryManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
         outline1.SetActive(false);
         outline2.SetActive(false);
         outline3.SetActive(false);
@@ -370,6 +498,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(false);
         outline6.SetActive(true);
         outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         setButton = false;
         setCrown = false;
         setDesert = false;
@@ -377,6 +508,9 @@ public class FishtiaryManager : MonoBehaviour
         setJungle = false;
         setAbyss = true;
         setPole = false;
+        setOcean = false;
+        setSorching = false;
+        setToxic = false;
     }
 
     public void Pole()
@@ -409,6 +543,18 @@ public class FishtiaryManager : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
         outline1.SetActive(false);
         outline2.SetActive(false);
         outline3.SetActive(false);
@@ -416,6 +562,9 @@ public class FishtiaryManager : MonoBehaviour
         outline5.SetActive(false);
         outline6.SetActive(false);
         outline7.SetActive(true);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
         setButton = false;
         setCrown = false;
         setDesert = false;
@@ -423,6 +572,201 @@ public class FishtiaryManager : MonoBehaviour
         setJungle = false;
         setAbyss = false;
         setPole = true;
+        setOcean = false;
+        setSorching = false;
+        setToxic = false;
+    }
+
+    public void Ocean()
+    {
+        foreach (var gameObject in buttonCavern)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in crownIsland)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in eternalDesert)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in eternalIcy)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in forgottenJungle)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in mutatedAbyss)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in northPole)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(true);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
+        outline1.SetActive(false);
+        outline2.SetActive(false);
+        outline3.SetActive(false);
+        outline4.SetActive(false);
+        outline5.SetActive(false);
+        outline6.SetActive(false);
+        outline7.SetActive(false);
+        outline8.SetActive(true);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
+        setButton = false;
+        setCrown = false;
+        setDesert = false;
+        setIcy = false;
+        setJungle = false;
+        setAbyss = false;
+        setPole = false;
+        setOcean = true;
+        setSorching = false;
+        setToxic = false;
+    }
+
+    public void ScorchingDeep()
+    {
+        foreach (var gameObject in buttonCavern)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in crownIsland)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in eternalDesert)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in eternalIcy)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in forgottenJungle)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in mutatedAbyss)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in northPole)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(true);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(false);
+        }
+        outline1.SetActive(false);
+        outline2.SetActive(false);
+        outline3.SetActive(false);
+        outline4.SetActive(false);
+        outline5.SetActive(false);
+        outline6.SetActive(false);
+        outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(true);
+        outline10.SetActive(false);
+        setButton = false;
+        setCrown = false;
+        setDesert = false;
+        setIcy = false;
+        setJungle = false;
+        setAbyss = false;
+        setPole = false;
+        setOcean = false;
+        setSorching = true;
+        setToxic = false;
+    }
+
+    public void ToxicGrowth()
+    {
+        foreach (var gameObject in buttonCavern)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in crownIsland)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in eternalDesert)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in eternalIcy)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in forgottenJungle)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in mutatedAbyss)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in northPole)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in ocean)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in sorchingDeep)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in toxicGrowth)
+        {
+            gameObject.SetActive(true);
+        }
+        outline1.SetActive(false);
+        outline2.SetActive(false);
+        outline3.SetActive(false);
+        outline4.SetActive(false);
+        outline5.SetActive(false);
+        outline6.SetActive(false);
+        outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(true);
+        setButton = false;
+        setCrown = false;
+        setDesert = false;
+        setIcy = false;
+        setJungle = false;
+        setAbyss = false;
+        setPole = false;
+        setOcean = false;
+        setSorching = false;
+        setToxic = true;
     }
 
     public void SetCommonFishInfo()
@@ -1085,5 +1429,43 @@ public class FishtiaryManager : MonoBehaviour
         godly.SetActive(false);
         divine.SetActive(false);
         secret.SetActive(false);
+    }
+
+    public void SwapToPage2()
+    {
+        foreach (var gameObject in page1Locations)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (var gameObject in page2Locations)
+        {
+            gameObject.SetActive(true);
+        }
+    }
+   
+    public void SwapToPage1()
+    {
+        foreach (var gameObject in page1Locations)
+        {
+            gameObject.SetActive(true);
+        }
+        foreach (var gameObject in page2Locations)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void HideOutlines()
+    {
+        outline1.SetActive(false);
+        outline2.SetActive(false);
+        outline3.SetActive(false);
+        outline4.SetActive(false);
+        outline5.SetActive(false);
+        outline6.SetActive(false);
+        outline7.SetActive(false);
+        outline8.SetActive(false);
+        outline9.SetActive(false);
+        outline10.SetActive(false);
     }
 }

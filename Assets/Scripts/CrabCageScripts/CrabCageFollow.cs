@@ -31,9 +31,13 @@ public class CrabCageFollow : MonoBehaviour
 
     public float rayRange;
 
+    public float countdownTimer;
+
     public bool canPlace;
 
     public bool colliding;
+
+    public bool startCatching;
 
     private Camera mainCamera;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -95,11 +99,23 @@ public class CrabCageFollow : MonoBehaviour
             if (Input.GetKeyDown(placeKey))
             {
                 Instantiate(crabCagePrefab, greenCrabCagePos, greenCrabCage.transform.rotation);
+                startCatching = true;
             }
         }
         else if (!canPlace)
         {
             greenCrabCageRenderer.material = denyMat;
+        }
+
+        if (startCatching)
+        {
+            countdownTimer += Time.deltaTime;
+            if (countdownTimer >= 10f)
+            {
+                Debug.Log("You caught a crab!");
+                startCatching = false;
+                countdownTimer = 0f;
+            }
         }
     }
 }
