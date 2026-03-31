@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BobberWaterControl : MonoBehaviour
 {
+    public CastRod castRod;
     private Rigidbody rb;
     public bool inWater = false;
     public bool canFloat = false;
@@ -17,7 +18,7 @@ public class BobberWaterControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (inWater)
+        if (inWater && castRod.isCasted)
         {
             // Freeze rotation to prevent rolling
             rb.constraints = RigidbodyConstraints.FreezeRotation;
