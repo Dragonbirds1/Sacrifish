@@ -34,7 +34,7 @@ public class CatchFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bobberWaterControl.inWater == true)
+        if (bobberWaterControl.inWater == true && castRod.isCasted)
         {
             timeTillCatch += Time.deltaTime;
             if (timeTillCatch >= rodCatchTime)
