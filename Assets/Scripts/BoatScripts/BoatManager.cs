@@ -6,6 +6,8 @@ public class BoatManager : MonoBehaviour
 {
     public PlayerMotor playerMotor;
 
+    public PlayerLook playerLook;
+
     public GameObject player;
 
     public GameObject boat;
@@ -41,6 +43,7 @@ public class BoatManager : MonoBehaviour
         if (isInBoat)
         {
             player.transform.position = boatSeat.position;
+            player.transform.rotation = Quaternion.Lerp(boatSeat.transform.rotation, boatSeat.transform.rotation, 0);
         }
 
         if (Vector3.Distance(player.transform.position, transform.position) <= interactionRange)
@@ -55,6 +58,7 @@ public class BoatManager : MonoBehaviour
             else if (Input.GetKeyDown(interactKey) && isInBoat)
             {
                 playerMotor.canMove = true;
+                player.transform.rotation = Quaternion.Euler(0, 0, 0);
                 isInBoat = false;
             }
         }

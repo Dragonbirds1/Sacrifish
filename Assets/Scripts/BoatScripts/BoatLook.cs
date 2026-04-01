@@ -15,7 +15,7 @@ public class BoatLook : MonoBehaviour
     public void ProcessLook(Vector2 input)
     {
         if (!boatManager.isInBoat) return;
-
+        
         float mouseX = Mathf.Clamp(input.x, -10f, 10f);
         //float mouseY = Mathf.Clamp(input.y, -10f, 10f);
 

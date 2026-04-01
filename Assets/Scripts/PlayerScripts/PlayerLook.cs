@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     public Camera cam;
-    private float xRotation = 0f;
+    public float xRotation = 0f;
 
     public float xSensitivity = 2f;
     public float ySensitivity = 2f;
