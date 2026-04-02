@@ -114,7 +114,7 @@ Material:
     - _FlowSpeed: 0.05
     - _FoamDensity: 5.99
     - _FoamSpeed: 1.29
-    - _FoamThickness: 3.64
+    - _FoamThickness: 4.48
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
