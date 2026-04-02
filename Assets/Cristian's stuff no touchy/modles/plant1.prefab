@@ -10,38 +10,53 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15070325
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.18052062
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.14289834
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1624.7767
+      value: 1315.976
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.091629
+      value: 40.039333
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7670.3906
+      value: 7240.3086
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9429432
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.17514165
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.26357162
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.10350599
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde524c3ff5188f4cacf06d90862fa51,
         type: 3}
@@ -147,7 +162,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7997507653778241543}
-  - screenRelativeHeight: 0.10517347
+  - screenRelativeHeight: 0.004
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7997507653778241543}
