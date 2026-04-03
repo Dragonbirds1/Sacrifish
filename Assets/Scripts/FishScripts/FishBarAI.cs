@@ -27,6 +27,7 @@ public class FishBarAI : MonoBehaviour
     public float maxX = 422f;
     public float originalPosX;
     public float originalPosY;
+    public float originalFishPosY;
 
     private float moveSpeed;
     private float acceleration;
@@ -60,7 +61,7 @@ public class FishBarAI : MonoBehaviour
             {
                 castRod.canRetract = false;
                 progress += 10 * Time.deltaTime;
-                fishRect.anchoredPosition = new Vector2(originalPosX, originalPosY);
+                fishRect.anchoredPosition = new Vector2(originalPosX, originalFishPosY);
                 smallBarRect.anchoredPosition = new Vector2(originalPosX, originalPosY);
                 X = 0;
                 catchMinigame.X = 0;

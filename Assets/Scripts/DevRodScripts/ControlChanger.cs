@@ -8,6 +8,8 @@ public class ControlChanger : MonoBehaviour
     public TMP_InputField inputField;
 
     public float numberTyped;
+
+    public bool getResult = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +19,11 @@ public class ControlChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        if (getResult)
+        {
+            inputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+            getResult = false;
+        }
     }
 
     public void ValueChangeCheck()
