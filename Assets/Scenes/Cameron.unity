@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae05f68b4c795b478f3806c890bc4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlChanger: {fileID: 0}
+  controlChanger: {fileID: 301031212}
   smallBarRect: {fileID: 2132598072}
   wallCheck1: {fileID: 1094739122}
   wallCheck2: {fileID: 61084868}
