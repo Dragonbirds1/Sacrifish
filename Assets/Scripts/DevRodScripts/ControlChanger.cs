@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class ControlChanger : MonoBehaviour
 {
+    public PlayerMotor playerMotor;
+
     public TMP_InputField inputField;
 
     public float numberTyped;
@@ -28,6 +30,7 @@ public class ControlChanger : MonoBehaviour
 
     public void ValueChangeCheck()
     {
+
         if (float.TryParse(inputField.text, out float result))
         {
             if (result <= 1068f)
