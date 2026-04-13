@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject InventoryMenu;
-    private bool menuActivated;
+    public GameObject InventoryView;
+    public bool menuActivated;
     public ItemSlot[] itemSlot;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,17 +14,17 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Inventory") && menuActivated)
+        if (Input.GetKeyDown(KeyCode.E) && menuActivated)
         {
             Time.timeScale = 1f;
-            InventoryMenu.SetActive(false);
+            InventoryView.SetActive(false);
             menuActivated = false;
         }
 
-        else if (Input.GetButtonDown("Inventory") && !menuActivated)
+        else if (Input.GetKeyDown(KeyCode.E) && !menuActivated)
         {
             Time.timeScale = 0f;
-            InventoryMenu.SetActive(true);
+            InventoryView.SetActive(true);
             menuActivated = true;
         }
     }
