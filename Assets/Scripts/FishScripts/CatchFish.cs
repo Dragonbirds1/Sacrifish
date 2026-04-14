@@ -11,6 +11,8 @@ public class CatchFish : MonoBehaviour
     public FishBarAI fishBarAI;
     public TMP_InputField luckInputField;
     public GameObject catchBar;
+    public GameObject fishSpawn;
+    public GameObject bobber;
     public float timeTillCatch; // Timer Floats
     public float rodCatchTime; // Object Floats
     public bool fishCaught;
@@ -36,6 +38,7 @@ public class CatchFish : MonoBehaviour
     {
         if (bobberWaterControl.inWater == true && castRod.isCasted)
         {
+            bobber.transform.rotation = Quaternion.Euler(-90, 0, 0);
             timeTillCatch += Time.deltaTime;
             if (timeTillCatch >= rodCatchTime)
             {
@@ -84,6 +87,11 @@ public class CatchFish : MonoBehaviour
             if (roll <= cumulative)
             {
                 Debug.Log("A " + rarities[i].name + " Fish is on your line");
+                if (rarities[i].fishModel != null)
+                {
+                    rarities[i].fishModel.transform.position = fishSpawn.transform.position;
+                    rarities[i].fishModel.transform.SetParent(fishSpawn.transform, true);
+                }
                 return rarities[i].name;
             }
         }
@@ -113,6 +121,7 @@ public class FishRarity
 {
     public string name;
     public float chance; // percent
+    public GameObject fishModel;
 }
 
 [System.Serializable]
