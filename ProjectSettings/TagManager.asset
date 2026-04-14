@@ -17,6 +17,9 @@ TagManager:
   - NorthPole
   - MutatedAbyss
   - GreenCrabCage
+  - Toxic
+  - Heat
+  - Cold
   layers:
   - Default
   - TransparentFX

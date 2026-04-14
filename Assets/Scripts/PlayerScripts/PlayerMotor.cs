@@ -20,19 +20,39 @@ public class PlayerMotor : MonoBehaviour
     public bool canJump = true;
     public float currentSpeed; // For red light green light game to get if the player is moving or not.
     public Vector3 moveDirection = Vector3.zero;
+    public bool startHideCursor;
+    public bool showCursor;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        if (startHideCursor)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else if (!startHideCursor)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
         controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (showCursor)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (!showCursor)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         isGrounded = controller.isGrounded;
         // always set the current speed to the player's velocity magnitude for red light green light game.
         //currentSpeed = playerVelocity.x;

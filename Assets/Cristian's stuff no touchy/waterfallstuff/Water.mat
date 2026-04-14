@@ -56,10 +56,11 @@ Material:
     - _NormalStrength: 0.01
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 1.01
+    - _Smoothness: 1.78
+    - _Trasnparent: 0
     - _VorAgitation: 1
-    - _VorPower: 4
-    - _VorScale: 10
+    - _VorPower: 2.43
+    - _VorScale: 4.4
     m_Colors:
     - _BaseColor: {r: 0, g: 0.06770175, b: 1.3773584, a: 1}
     - _NormalSpeed: {r: 0, g: 0.2, b: 0, a: 0}
