@@ -8,6 +8,8 @@ public class ToggleChanger : MonoBehaviour
 
     public GameObject changer;
 
+    public bool isChangerActive;
+
     public KeyCode toggleKey;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +26,7 @@ public class ToggleChanger : MonoBehaviour
             {
                 playerMotor.showCursor = true;
                 changer.SetActive(true);
+                isChangerActive = true;
                 Debug.Log("Toggled showCursor to: " + playerMotor.showCursor);
             }
         }
@@ -37,7 +40,8 @@ public class ToggleChanger : MonoBehaviour
     public void TurnOffChanger()
     {
         changer.SetActive(false);
-         playerMotor.showCursor = false;
-         Debug.Log("Toggled showCursor to: " + playerMotor.showCursor);
+        playerMotor.showCursor = false;
+        isChangerActive = false;
+        Debug.Log("Toggled showCursor to: " + playerMotor.showCursor);
     }
 }
