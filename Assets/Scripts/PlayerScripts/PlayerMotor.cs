@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.SceneManagement;
 
 public class PlayerMotor : MonoBehaviour
 {
+    public ToggleChanger toggleChanger;
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool isGrounded;
@@ -43,12 +45,12 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (showCursor)
+        if (showCursor && toggleChanger.isChangerActive)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        else if (!showCursor)
+        else if (!showCursor && !toggleChanger.isChangerActive)
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
