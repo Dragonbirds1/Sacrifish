@@ -12,7 +12,7 @@ public class SwapRods : MonoBehaviour
     public BobberHanging bobberHanging;
     public FishingLineRenderer fishingLineRenderer;
 
-    public KeyCode rodSwapKey, rodSwapKey2, rodSwapKey3; // This is for testing purposes, there will be no keycodes when finished.
+    public KeyCode[] rodSwapKeys; // This is for testing purposes, there will be no keycodes when finished.
 
     public Rods[] rods;
     public Rods currentRod;
@@ -44,7 +44,7 @@ public class SwapRods : MonoBehaviour
 
     public void SwapRod()
     {
-        if (Input.GetKeyDown(rodSwapKey))
+        if (Input.GetKeyDown(rodSwapKeys[0]))
         {
             currentRod = rods[1];
             foreach (var rods in rods)
@@ -52,7 +52,7 @@ public class SwapRods : MonoBehaviour
                 rods.isRod = false;
             }
         }
-        if (Input.GetKeyDown(rodSwapKey2))
+        if (Input.GetKeyDown(rodSwapKeys[1]))
         {
             currentRod = rods[0];
             foreach (var rods in rods)
@@ -60,12 +60,36 @@ public class SwapRods : MonoBehaviour
                 rods.isRod = false;
             }
         }
-        if (Input.GetKeyDown(rodSwapKey3))
+        if (Input.GetKeyDown(rodSwapKeys[2]))
         {
             currentRod = rods[2];
             foreach (var rods in rods)
             {
                 rods.isRod = false; 
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[3]))
+        {
+            currentRod = rods[3];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[4]))
+        {
+            currentRod = rods[4];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[5]))
+        {
+            currentRod = rods[5];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
             }
         }
     }

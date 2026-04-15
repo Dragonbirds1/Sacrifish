@@ -15,6 +15,7 @@ public class ToxicBar : MonoBehaviour
     public bool isInToxicArea = false;
     public bool hasToxic = false;
     public bool disableToxicAtStart;
+    public bool hasGasMask;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,6 +48,10 @@ public class ToxicBar : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        if (hasGasMask)
+        {
+            return; // If the player has a gas mask, they are immune to toxicity
+        }
         if (other.gameObject == player)
         {
             toxicBar.SetActive(true);
@@ -55,6 +60,10 @@ public class ToxicBar : MonoBehaviour
     }
     public void OnTriggerStay(Collider other)
     {
+        if (hasGasMask)
+        {
+            return; // If the player has a gas mask, they are immune to toxicity
+        }
         if (other.gameObject == player)
         {
             currentToxicity += Time.deltaTime * 100f; // Adjust the rate of toxicity increase as needed
