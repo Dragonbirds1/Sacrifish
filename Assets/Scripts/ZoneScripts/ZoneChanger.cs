@@ -80,7 +80,7 @@ public class ZoneChanger : MonoBehaviour
         {
             catchFish.currentZone = catchFish.zones[6];
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
-            popupText.text = "Eternal Island Icy";
+            popupText.text = "Eternal Island Tundra";
             showPopup = true;
         }
         else if (other.CompareTag("ScorchingDeep"))

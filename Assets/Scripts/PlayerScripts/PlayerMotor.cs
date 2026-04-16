@@ -45,7 +45,7 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (showCursor && toggleChanger.isChangerActive)
+        if (showCursor)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -139,5 +139,15 @@ public class PlayerMotor : MonoBehaviour
                 playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
             }
         }
+    }
+
+    public void ShowCursor()
+    {
+        showCursor = true;
+    }
+
+    public void HideCursor()
+    {
+        showCursor = false;
     }
 }
