@@ -89,8 +89,8 @@ public class CatchFish : MonoBehaviour
                 Debug.Log("A " + rarities[i].name + " Fish is on your line");
                 if (rarities[i].fishModel != null)
                 {
-                    rarities[i].fishModel.transform.position = fishSpawn.transform.position;
-                    rarities[i].fishModel.transform.SetParent(fishSpawn.transform, true);
+                    Instantiate(rarities[i].fishModel, fishSpawn.transform.position, Quaternion.identity, fishSpawn.transform);
+                    // Make it so the fish model is a child of the fishSpawn object
                 }
                 return rarities[i].name;
             }
@@ -121,6 +121,8 @@ public class FishRarity
 {
     public string name;
     public float chance; // percent
+    public int value; // sell price
+    public int howManyPlayerHasCaught; // for stats
     public GameObject fishModel;
 }
 
