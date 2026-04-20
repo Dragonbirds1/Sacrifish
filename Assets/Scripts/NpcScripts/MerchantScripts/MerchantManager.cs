@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class MerchantManager : MonoBehaviour
 {
     public PlayerMotor playerMotor;
+    public CatchFish catchFish;
     public TextMeshProUGUI merchantLines;
     public KeyCode toggleKey;
     public float typingSpeed = 0.05f; // Speed at which the NPC "types" the response.
@@ -92,6 +93,7 @@ public class MerchantManager : MonoBehaviour
             {
                 if (haveFish)
                 {
+                    catchFish.SellAllFish();
                     return "Pleasure doing buisness with you.";
                 }
                 else

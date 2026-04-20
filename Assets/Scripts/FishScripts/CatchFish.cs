@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 using static UnityEngine.Rendering.DebugUI;
 
 public class CatchFish : MonoBehaviour
@@ -9,7 +10,9 @@ public class CatchFish : MonoBehaviour
     public BobberWaterControl bobberWaterControl;
     public CatchMinigame catchMinigame;
     public FishBarAI fishBarAI;
+    public MerchantManager merchantManager;
     public TMP_InputField luckInputField;
+    public TextMeshProUGUI reckels;
     public GameObject catchBar;
     public GameObject fishSpawn;
     public GameObject bobber;
@@ -19,6 +22,7 @@ public class CatchFish : MonoBehaviour
     public bool isDevRod;
     public bool fishOnLine;
     public string fishRarityName;
+    public int reckelsToAdd;
 
     public FishingZone[] zones;
     public FishingZone currentZone;
@@ -27,15 +31,23 @@ public class CatchFish : MonoBehaviour
     public float rodBonus; // = 0.05f;
     public float baitBonus; // = 0.05f;
 
+    private GameObject fishClone;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         catchBar.SetActive(false);
+
+        foreach (var rarity in currentZone.rarities)
+        {
+            fishClone = Instantiate(rarity.fishModel);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        reckels.text = "Ɍ: " + reckelsToAdd.ToString();
         if (bobberWaterControl.inWater == true && castRod.isCasted)
         {
             bobber.transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -92,6 +104,7 @@ public class CatchFish : MonoBehaviour
                     Instantiate(rarities[i].fishModel, fishSpawn.transform.position, Quaternion.identity, fishSpawn.transform);
                     // Make it so the fish model is a child of the fishSpawn object
                 }
+                rarities[i].howManyPlayerHasCaught++;
                 return rarities[i].name;
             }
         }
@@ -112,7 +125,29 @@ public class CatchFish : MonoBehaviour
         // 🎣 Get FishBarAI (your minigame)
         fishBarAI.Setup(currentZone, rarity);
 
+        merchantManager.haveFish = true;
+
         Debug.Log("Caught: " + rarity + " fish in " + currentZone.zoneName);
+
+    }
+
+    public void SellAllFish()
+    {
+        foreach (var rarity in currentZone.rarities)
+        {
+            if (rarity.howManyPlayerHasCaught > 0)
+            {
+                Debug.Log("Sold " + rarity.howManyPlayerHasCaught + " " + rarity.name + " fish for " + (rarity.value * rarity.howManyPlayerHasCaught) + " coins.");
+                reckelsToAdd += rarity.value; //* rarity.howManyPlayerHasCaught;
+                rarity.howManyPlayerHasCaught--;
+                Destroy(fishClone);
+            }
+            else
+            {
+                Debug.Log("No " + rarity.name + " fish to sell.");
+                merchantManager.haveFish = false;
+            }
+        }
     }
 }
 
