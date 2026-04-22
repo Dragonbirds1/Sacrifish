@@ -26,17 +26,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b567b5b1c9399bb40a4d177e99d0d37a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1237.9763
+      value: 1805.7632
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b567b5b1c9399bb40a4d177e99d0d37a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 78.29495
+      value: 39.11048
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b567b5b1c9399bb40a4d177e99d0d37a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7261.4863
+      value: 7575.3066
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b567b5b1c9399bb40a4d177e99d0d37a,
         type: 3}
@@ -90,6 +90,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 398658361885859070}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b567b5b1c9399bb40a4d177e99d0d37a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7674735201005668260}
   m_SourcePrefab: {fileID: 100100000, guid: b567b5b1c9399bb40a4d177e99d0d37a, type: 3}
 --- !u!23 &46960151057663064 stripped
 MeshRenderer:
@@ -343,6 +347,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &7674735201005668260
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938977859658516852}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.1275024
+  m_Height: 15.634848
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.4048529, z: 5.096863}
 --- !u!23 &9105746328246982020 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1050135703514554785, guid: b567b5b1c9399bb40a4d177e99d0d37a,
