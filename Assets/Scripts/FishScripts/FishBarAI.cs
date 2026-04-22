@@ -121,6 +121,7 @@ public class FishBarAI : MonoBehaviour
                 castRod.canRetract = true;
                 castRod.Retract();
                 catchFish.timeTillCatch = 0;
+                catchFish.CaughtFish();
             }
             else if (progress <= 0f)
             {
@@ -133,6 +134,7 @@ public class FishBarAI : MonoBehaviour
                 castRod.canRetract = true;
                 castRod.Retract();
                 catchFish.timeTillCatch = 0;
+                catchFish.FailedCatch();
             }
         }
     }
