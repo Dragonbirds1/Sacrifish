@@ -13,6 +13,7 @@ public class CatchFish : MonoBehaviour
     public CatchMinigame catchMinigame;
     public FishBarAI fishBarAI;
     public MerchantManager merchantManager;
+    public TempInventoryManager tempInventoryManager;
     public TMP_InputField luckInputField;
     public TextMeshProUGUI reckels;
     public GameObject catchBar;
@@ -25,6 +26,7 @@ public class CatchFish : MonoBehaviour
     public bool fishOnLine;
     public string fishRarityName;
     public string rarity;
+    public string rarityName;
     public int reckelsToAdd;
 
     public FishingZone[] zones;
@@ -105,6 +107,7 @@ public class CatchFish : MonoBehaviour
                 if (rarities[i].fishModel != null)
                 {
                     Instantiate(rarities[i].fishModel, fishSpawn.transform.position, Quaternion.identity, fishSpawn.transform);
+                    rarityName = rarities[i].fishName;
                     // Make it so the fish model is a child of the fishSpawn object
                 }
 
@@ -140,16 +143,19 @@ public class CatchFish : MonoBehaviour
         {
             zones[0].rarities[0].howManyPlayerHasCaught++;
             zones[0].rarities[0].isCaught = false;
+            zones[0].rarities[0].moveToInventory = true;
         }
         else if (zones[0].rarities[1].isCaught)
         {
             zones[0].rarities[1].howManyPlayerHasCaught++;
             zones[0].rarities[1].isCaught = false;
+            zones[0].rarities[1].moveToInventory = true;
         }
         else if (zones[0].rarities[2].isCaught)
         {
             zones[0].rarities[2].howManyPlayerHasCaught++;
             zones[0].rarities[2].isCaught = false;
+            zones[0].rarities[2].moveToInventory = true;
         }
 
         // CROWN ISLAND ZONE
@@ -157,16 +163,19 @@ public class CatchFish : MonoBehaviour
         {
             zones[1].rarities[0].howManyPlayerHasCaught++;
             zones[1].rarities[0].isCaught = false;
+            zones[1].rarities[0].moveToInventory = true;
         }
         else if (zones[1].rarities[1].isCaught)
         {
             zones[1].rarities[1].howManyPlayerHasCaught++;
             zones[1].rarities[1].isCaught = false;
+            zones[1].rarities[1].moveToInventory = true;
         }
         else if (zones[1].rarities[2].isCaught)
         {
             zones[1].rarities[2].howManyPlayerHasCaught++;
             zones[1].rarities[2].isCaught = false;
+            zones[1].rarities[2].moveToInventory = true;
         }
 
         // FORGOTTEN JUNGLE ZONE
@@ -174,16 +183,19 @@ public class CatchFish : MonoBehaviour
         {
             zones[2].rarities[0].howManyPlayerHasCaught++;
             zones[2].rarities[0].isCaught = false;
+            zones[2].rarities[0].moveToInventory = true;
         }
         else if (zones[2].rarities[1].isCaught)
         {
             zones[2].rarities[1].howManyPlayerHasCaught++;
             zones[2].rarities[1].isCaught = false;
+            zones[2].rarities[1].moveToInventory = true;
         }
         else if (zones[2].rarities[2].isCaught)
         {
             zones[2].rarities[2].howManyPlayerHasCaught++;
             zones[2].rarities[2].isCaught = false;
+            zones[2].rarities[2].moveToInventory = true;
         }
 
         // OCEAN ZONE
@@ -191,16 +203,19 @@ public class CatchFish : MonoBehaviour
         {
             zones[3].rarities[0].howManyPlayerHasCaught++;
             zones[3].rarities[0].isCaught = false;
+            zones[3].rarities[0].moveToInventory = true;
         }
         else if (zones[3].rarities[1].isCaught)
         {
             zones[3].rarities[1].howManyPlayerHasCaught++;
             zones[3].rarities[1].isCaught = false;
+            zones[3].rarities[1].moveToInventory = true;
         }
         else if (zones[3].rarities[2].isCaught)
         {
             zones[3].rarities[2].howManyPlayerHasCaught++;
             zones[3].rarities[2].isCaught = false;
+            zones[3].rarities[2].moveToInventory = true;
         }
 
         // TOXIC GROWTH ZONE
@@ -208,18 +223,23 @@ public class CatchFish : MonoBehaviour
         {
             zones[4].rarities[0].howManyPlayerHasCaught++;
             zones[4].rarities[0].isCaught = false;
+            zones[4].rarities[0].moveToInventory = true;
         }
         else if (zones[4].rarities[1].isCaught)
         {
             zones[4].rarities[1].howManyPlayerHasCaught++;
             zones[4].rarities[1].isCaught = false;
+            zones[4].rarities[1].moveToInventory = true;
         }
         else if (zones[4].rarities[2].isCaught)
         {
             zones[4].rarities[2].howManyPlayerHasCaught++;
             zones[4].rarities[2].isCaught = false;
+            zones[4].rarities[2].moveToInventory = true;
         }
-            Debug.Log("Caught: " + rarity + " fish in " + currentZone.zoneName);
+        // Add the fish to an empty slot in the inventory and set the slot stats to the fish stats
+        Debug.Log("Caught: " + rarity + " " + rarityName + " fish in " + currentZone.zoneName);
+        GetCaughtFish();
     }
 
     public void FailedCatch()
@@ -230,13 +250,31 @@ public class CatchFish : MonoBehaviour
         }
     }
 
+    public void GetCaughtFish()
+    {
+        // Make it so the script checks for the caught fish and sets the stats of the caught fish in the inventory to the stats of the caught fish in the catchfish script
+        foreach (var rarity in currentZone.rarities)
+        {
+            if (rarity.moveToInventory)
+            {
+                // Get the stat from TempInventoryManager and set it to the stat of the caught fish in the inventory
+                tempInventoryManager.AddFishToInventory(rarity.fishName, rarity.howManyPlayerHasCaught);
+                Debug.Log("Added " + rarity.fishName + " fish to inventory with value " + rarity.howManyPlayerHasCaught);
+
+
+                // Reset the moveToInventory flag
+                rarity.moveToInventory = false;
+            }
+        }
+    }
+
     public void SellAllFish()
     {
         foreach (var rarity in currentZone.rarities)
         {
             if (rarity.howManyPlayerHasCaught > 0)
             {
-                Debug.Log("Sold " + rarity.howManyPlayerHasCaught + " " + rarity.name + " fish for " + (rarity.value * rarity.howManyPlayerHasCaught) + " coins.");
+                Debug.Log("Sold " + rarity.howManyPlayerHasCaught + " " + rarity.fishName + " fish for " + (rarity.value * rarity.howManyPlayerHasCaught) + " coins.");
                 reckelsToAdd += rarity.value; //* rarity.howManyPlayerHasCaught;
                 rarity.howManyPlayerHasCaught--;
                 Destroy(fishClone);
@@ -254,10 +292,12 @@ public class CatchFish : MonoBehaviour
 public class FishRarity
 {
     public string name;
+    public string fishName;
     public float chance; // percent
     public int value; // sell price
     public int howManyPlayerHasCaught; // for stats
     public bool isCaught; // for stats
+    public bool moveToInventory; // for stats
     public GameObject fishModel;
 }
 
