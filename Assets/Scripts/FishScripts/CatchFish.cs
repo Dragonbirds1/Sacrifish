@@ -42,11 +42,6 @@ public class CatchFish : MonoBehaviour
     void Start()
     {
         catchBar.SetActive(false);
-
-        foreach (var rarity in currentZone.rarities)
-        {
-            fishClone = Instantiate(rarity.fishModel);
-        }
     }
 
     // Update is called once per frame
@@ -106,7 +101,7 @@ public class CatchFish : MonoBehaviour
                 Debug.Log("A " + rarities[i].name + " Fish is on your line");
                 if (rarities[i].fishModel != null)
                 {
-                    Instantiate(rarities[i].fishModel, fishSpawn.transform.position, Quaternion.identity, fishSpawn.transform);
+                    fishClone = Instantiate(rarities[i].fishModel, fishSpawn.transform.position, Quaternion.identity, fishSpawn.transform);
                     rarityName = rarities[i].fishName;
                     // Make it so the fish model is a child of the fishSpawn object
                 }
@@ -275,9 +270,11 @@ public class CatchFish : MonoBehaviour
             if (rarity.howManyPlayerHasCaught > 0)
             {
                 Debug.Log("Sold " + rarity.howManyPlayerHasCaught + " " + rarity.fishName + " fish for " + (rarity.value * rarity.howManyPlayerHasCaught) + " coins.");
-                reckelsToAdd += rarity.value; //* rarity.howManyPlayerHasCaught;
-                rarity.howManyPlayerHasCaught--;
+                reckelsToAdd += rarity.value * rarity.howManyPlayerHasCaught;
+                rarity.howManyPlayerHasCaught = 0;
                 Destroy(fishClone);
+                // Make it so the TempInventoryManager script checks for the sold fish and subtracts the quantity of the sold fish from the inventory
+                tempInventoryManager.SellAllFishFromInventory(rarity.fishName, rarity.howManyPlayerHasCaught);
             }
             else
             {

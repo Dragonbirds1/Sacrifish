@@ -22,7 +22,7 @@ public class MerchantManager : MonoBehaviour
     public string lastNpcResponse = "";
     //public float responseDelay = 1.0f; // Delay in seconds before the NPC responds.
     public bool sellFishInHand, sellAllFish, goodBye, fishInHand, haveFish;
-    public GameObject sellFishInHandButton, sellAllFishButton, goodByeButton;
+    public GameObject sellFishInHandButton, sellAllFishButton, goodByeButton, background;
     public float timeTillRemoveText = 1f; // Time in seconds until the NPC's dialogue text is removed after displaying a response.
     public bool isRemovingText;
 
@@ -32,6 +32,7 @@ public class MerchantManager : MonoBehaviour
         sellFishInHandButton.SetActive(false);
         sellAllFishButton.SetActive(false);
         goodByeButton.SetActive(false);
+        background.SetActive(false);
     }
 
     // Update is called once per frame
@@ -148,6 +149,7 @@ public class MerchantManager : MonoBehaviour
             sellFishInHandButton.SetActive(true);
             sellAllFishButton.SetActive(true);
             goodByeButton.SetActive(true);
+            background.SetActive(true);
         }
     }
 
@@ -158,6 +160,7 @@ public class MerchantManager : MonoBehaviour
         sellFishInHandButton.SetActive(false);
         sellAllFishButton.SetActive(false);
         goodByeButton.SetActive(false);
+        background.SetActive(false);
         GenerateNpcResponse();
     }
     public void SellAllFish()
@@ -167,6 +170,7 @@ public class MerchantManager : MonoBehaviour
         sellAllFishButton.SetActive(false);
         sellFishInHandButton.SetActive(false);
         goodByeButton.SetActive(false);
+        background.SetActive(false);
         GenerateNpcResponse();
     }
     
@@ -177,6 +181,7 @@ public class MerchantManager : MonoBehaviour
         goodByeButton.SetActive(false);
         sellFishInHandButton.SetActive(false);
         sellAllFishButton.SetActive(false);
+        background.SetActive(false);
         GenerateNpcResponse();
     }
 }
