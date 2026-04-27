@@ -101,9 +101,10 @@ public class CatchFish : MonoBehaviour
                 Debug.Log("A " + rarities[i].name + " Fish is on your line");
                 if (rarities[i].fishModel != null)
                 {
-                    fishClone = Instantiate(rarities[i].fishModel, fishSpawn.transform.position, Quaternion.identity, fishSpawn.transform);
-                    rarityName = rarities[i].fishName;
+                    // Spawn the fish model and make the fish mover in the model move to the fish spawn point
+                    fishClone = Instantiate(rarities[i].fishModel, fishSpawn.transform.position, Quaternion.identity);
                     // Make it so the fish model is a child of the fishSpawn object
+                    fishClone.transform.SetParent(fishSpawn.transform);
                 }
 
                 rarities[i].isCaught = true; // Mark this rarity as caught for stats
@@ -255,6 +256,7 @@ public class CatchFish : MonoBehaviour
                 // Get the stat from TempInventoryManager and set it to the stat of the caught fish in the inventory
                 tempInventoryManager.AddFishToInventory(rarity.fishName, rarity.howManyPlayerHasCaught);
                 Debug.Log("Added " + rarity.fishName + " fish to inventory with value " + rarity.howManyPlayerHasCaught);
+                Destroy(fishClone);
 
 
                 // Reset the moveToInventory flag
@@ -272,7 +274,7 @@ public class CatchFish : MonoBehaviour
                 Debug.Log("Sold " + rarity.howManyPlayerHasCaught + " " + rarity.fishName + " fish for " + (rarity.value * rarity.howManyPlayerHasCaught) + " coins.");
                 reckelsToAdd += rarity.value * rarity.howManyPlayerHasCaught;
                 rarity.howManyPlayerHasCaught = 0;
-                Destroy(fishClone);
+                //Destroy(fishClone);
                 // Make it so the TempInventoryManager script checks for the sold fish and subtracts the quantity of the sold fish from the inventory
                 tempInventoryManager.SellAllFishFromInventory(rarity.fishName, rarity.howManyPlayerHasCaught);
             }

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class inventoryCodeButtons : MonoBehaviour
 {
-    public void EXIT()
+    public void Collect()
     {
         //EXITs Inventory Menu
         SceneManager.LoadScene("Game");
