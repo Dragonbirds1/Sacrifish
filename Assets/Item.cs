@@ -28,4 +28,16 @@ public class Item : MonoBehaviour
                 quantity = leftOverItems;
         }
     }
+    public void OnCatch(Collision collision)
+    {
+        int leftOverItems = inventoryManager.AddItem(itemName, quantity, sprite);
+        if (leftOverItems <= 0)
+        {
+            Destroy(gameObject);
+        }
+        else
+            quantity = leftOverItems;
+        //Item.OnCatch(collision);
+        //  !!!!!!!!!! THIS NEEDS TO KNOW WHAT ITEM IT IS !!!!!!!!! AAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!!!!!!!!
+    }
 }
