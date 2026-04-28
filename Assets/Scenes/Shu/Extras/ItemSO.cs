@@ -6,6 +6,8 @@ using UnityEngine;
 public class ItemSO: ScriptableObject
 {
     public string itemName;
+    public Sprite itemSprite;
+
     public StatToChange statToChange = new StatToChange();
 
 

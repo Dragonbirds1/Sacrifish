@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class inventoryCodeButtons : MonoBehaviour
 {
-    public void Collect()
+    public void Collect(ItemSO item)
     {
-        //EXITs Inventory Menu
-        SceneManager.LoadScene("Main Menu");
+        Debug.Log("Collect button clicked");
+        FindFirstObjectByType<InventoryManager>().AddItem(item, 1);
     }
 }

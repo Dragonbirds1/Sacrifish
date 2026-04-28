@@ -6,9 +6,8 @@ using UnityEngine.EventSystems;
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
     //======ITEM DATA======//
-    public string itemName;
+    public ItemSO item;
     public int quantity;
-    public Sprite itemSprite;
     public bool isFull;
 
     [SerializeField]
@@ -34,18 +33,17 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
 
 
-    public int AddItem(string itemName, int quantity, Sprite itemSprite)
+    public int AddItem(ItemSO item, int quantity)
     {
         //Check to see if the slot is already full
         if ( isFull)
             return quantity;
 
         //Update NAME
-        this.itemName = itemName;
+        this.item = item;
 
         //Update image
-        this.itemSprite = itemSprite;
-        itemImage.sprite = itemSprite;
+        itemImage.sprite = item.itemSprite;
 
         //Update QUANTITY
         this.quantity += quantity;

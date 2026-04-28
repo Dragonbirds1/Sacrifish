@@ -1,13 +1,13 @@
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
     [SerializeField]
-    private string itemName;
+    private ItemSO item;
+
     [SerializeField]
     private int quantity;
-    [SerializeField]
-    private Sprite sprite;
 
     private InventoryManager inventoryManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +19,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            int leftOverItems = inventoryManager.AddItem(itemName, quantity, sprite);
+            int leftOverItems = inventoryManager.AddItem(item, quantity);
             if (leftOverItems <= 0)
             {
                 Destroy(gameObject);
@@ -28,16 +28,14 @@ public class Item : MonoBehaviour
                 quantity = leftOverItems;
         }
     }
-    public void OnCatch(Collision collision)
+    public void OnCatch(GameObject findObject)
     {
-        int leftOverItems = inventoryManager.AddItem(itemName, quantity, sprite);
+        int leftOverItems = inventoryManager.AddItem(item, quantity);
         if (leftOverItems <= 0)
         {
             Destroy(gameObject);
         }
         else
             quantity = leftOverItems;
-        //Item.OnCatch(collision);
-        //  !!!!!!!!!! THIS NEEDS TO KNOW WHAT ITEM IT IS !!!!!!!!! AAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!!!!!!!!
     }
 }

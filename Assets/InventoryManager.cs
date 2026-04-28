@@ -28,15 +28,15 @@ public class InventoryManager : MonoBehaviour
             menuActivated = true;
         }
     }
-    public int AddItem(string itemName, int quantity, Sprite itemSprite)
+    public int AddItem(ItemSO item, int quantity)
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if (!itemSlot[i].isFull && itemSlot[i].name == name || itemSlot[i].quantity == 0)
             {
-                int leftOverItems = itemSlot[i].AddItem(itemName, quantity, itemSprite);
+                int leftOverItems = itemSlot[i].AddItem(item, quantity);
                 if (leftOverItems >0)
-                    leftOverItems = AddItem(itemName, leftOverItems, itemSprite);
+                    leftOverItems = AddItem(item, leftOverItems);
                 return leftOverItems;
             }
         }
