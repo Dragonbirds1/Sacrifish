@@ -6,6 +6,6 @@ public class inventoryCodeButtons : MonoBehaviour
     public void Collect()
     {
         //EXITs Inventory Menu
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Main Menu");
     }
 }
