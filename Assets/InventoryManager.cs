@@ -32,14 +32,20 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
-            if (!itemSlot[i].isFull && itemSlot[i].name == name || itemSlot[i].quantity == 0)
+            if (itemSlot[i].isFull)
+                continue;
+
+            if ((itemSlot[i].item != null && itemSlot[i].item == item) || itemSlot[i].quantity == 0)
             {
                 int leftOverItems = itemSlot[i].AddItem(item, quantity);
-                if (leftOverItems >0)
+
+                if (leftOverItems > 0)
                     leftOverItems = AddItem(item, leftOverItems);
+
                 return leftOverItems;
             }
         }
+
         return quantity;
     }
     public void DeselectAllSlots()
