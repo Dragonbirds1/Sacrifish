@@ -7,5 +7,6 @@ public class inventoryCodeButtons : MonoBehaviour
     {
         Debug.Log("Collect button clicked");
         FindFirstObjectByType<InventoryManager>().AddItem(item, 1);
+        FindFirstObjectByType<Item>().OnCatch();
     }
 }

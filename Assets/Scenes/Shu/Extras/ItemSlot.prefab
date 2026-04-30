@@ -241,9 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5a63b7cd4e3c04ab6e761ccec738e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  item: {fileID: 0}
   quantity: 0
-  itemSprite: {fileID: 0}
   isFull: 0
   maxNumberOfItems: 9999
   quantityText: {fileID: 9067707862691451388}

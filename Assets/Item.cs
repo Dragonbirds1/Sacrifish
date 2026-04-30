@@ -1,3 +1,4 @@
+using System;
 using System.Linq.Expressions;
 using UnityEngine;
 
@@ -28,7 +29,17 @@ public class Item : MonoBehaviour
                 quantity = leftOverItems;
         }
     }
-    public void OnCatch(GameObject findObject)
+    /*void OnCatch(GameObject findObject)
+    {
+        int leftOverItems = inventoryManager.AddItem(item, quantity);
+        if (leftOverItems <= 0)
+        {
+            Destroy(gameObject);
+        }
+        else
+            quantity = leftOverItems;
+    }*/
+    public void OnCatch()
     {
         int leftOverItems = inventoryManager.AddItem(item, quantity);
         if (leftOverItems <= 0)
@@ -38,4 +49,8 @@ public class Item : MonoBehaviour
         else
             quantity = leftOverItems;
     }
+    /*void FixedUpdate()
+    {
+        OnCatch();
+    }*/
 }
