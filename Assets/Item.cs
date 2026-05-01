@@ -16,41 +16,16 @@ public class Item : MonoBehaviour
     {
         inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
     }
-    private void OnCollisionEnter(Collision collision)
+    void Update()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            int leftOverItems = inventoryManager.AddItem(item, quantity);
-            if (leftOverItems <= 0)
-            {
-                Destroy(gameObject);
-            }
-            else
-                quantity = leftOverItems;
+            Collect();
         }
     }
-    /*void OnCatch(GameObject findObject)
-    {
-        int leftOverItems = inventoryManager.AddItem(item, quantity);
-        if (leftOverItems <= 0)
-        {
-            Destroy(gameObject);
-        }
-        else
-            quantity = leftOverItems;
-    }*/
-    public void OnCatch()
-    {
-        int leftOverItems = inventoryManager.AddItem(item, quantity);
-        if (leftOverItems <= 0)
-        {
-            Destroy(gameObject);
-        }
-        else
-            quantity = leftOverItems;
+    public void Collect()
+    { 
+        FindFirstObjectByType<InventoryManager>().AddItem(item, 1);
     }
-    /*void FixedUpdate()
-    {
-        OnCatch();
-    }*/
+
 }
