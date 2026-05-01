@@ -142,6 +142,6 @@ Material:
     - _FlowDirection: {r: 0.1, g: 0.5, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _color: {r: 1.4434781, g: 0.19848827, b: 2.214712, a: 0}
-    - _color2: {r: 0.61858714, g: 0, b: 0.8235294, a: 0}
+    - _color2: {r: 0.7019608, g: 0, b: 0.8235294, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
