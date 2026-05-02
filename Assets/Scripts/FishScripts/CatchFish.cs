@@ -1,6 +1,5 @@
 using JetBrains.Annotations;
 using TMPro;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
