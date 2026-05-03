@@ -37,6 +37,7 @@ public class ZoneChanger : MonoBehaviour
         if (other.CompareTag("CrownIsland"))
         {
             catchFish.currentZone = catchFish.zones[0];
+            catchFish.songSource.Play();
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Crown Island";
             showPopup = true;
@@ -44,6 +45,7 @@ public class ZoneChanger : MonoBehaviour
         else if (other.CompareTag("Ocean"))
         {
             catchFish.currentZone = catchFish.zones[1];
+            catchFish.songSource.Play();
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Ocean";
             showPopup = true;
@@ -51,6 +53,7 @@ public class ZoneChanger : MonoBehaviour
         else if (other.CompareTag("ButtonCavern"))
         {
             catchFish.currentZone = catchFish.zones[2];
+            catchFish.songSource.Play();
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Button Cavern";
             showPopup = true;
@@ -58,6 +61,7 @@ public class ZoneChanger : MonoBehaviour
         else if (other.CompareTag("ForgottenJungle"))
         {
             catchFish.currentZone = catchFish.zones[3];
+            catchFish.songSource.Play();
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Forgotten Jungle";
             showPopup = true;
@@ -72,6 +76,7 @@ public class ZoneChanger : MonoBehaviour
         else if (other.CompareTag("ToxicGrowth"))
         {
             catchFish.currentZone = catchFish.zones[5];
+            catchFish.songSource.Play();
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Toxic Growth";
             showPopup = true;

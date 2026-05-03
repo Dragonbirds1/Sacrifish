@@ -37,6 +37,8 @@ public class CatchFish : MonoBehaviour
 
     private GameObject fishClone;
 
+    public AudioSource songSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,6 +48,11 @@ public class CatchFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        songSource.clip = currentZone.zoneSong;
+        if (!songSource.isPlaying)
+        {
+            songSource.Play();
+        }
         reckels.text = "Ɍ: " + reckelsToAdd.ToString();
         if (bobberWaterControl.inWater == true && castRod.isCasted)
         {
@@ -304,5 +311,6 @@ public class FishingZone
 {
     public string zoneName;
     public float difficulty;
+    public AudioClip zoneSong;
     public FishRarity[] rarities;
 }
