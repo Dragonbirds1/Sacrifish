@@ -8,6 +8,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class CatchFish : MonoBehaviour
 {
     public CastRod castRod;
+    public PlayerMotor playerMotor;
     public BobberWaterControl bobberWaterControl;
     public CatchMinigame catchMinigame;
     public FishBarAI fishBarAI;
@@ -65,7 +66,11 @@ public class CatchFish : MonoBehaviour
                     float luck = playerLuck + rodBonus + baitBonus; // = 0.2f
 
                     CatchTheFish();
-                    
+
+                    playerMotor.canMove = false;
+
+                    playerMotor.canJump = false;
+
                     fishCaught = true;
                 }
                 timeTillCatch = 0;
@@ -139,6 +144,10 @@ public class CatchFish : MonoBehaviour
     public void CaughtFish()
     {
         merchantManager.haveFish = true;
+
+        playerMotor.canJump = true;
+
+        playerMotor.canMove = true;
 
         // BUTTON CAVERN ZONE
         if (zones[0].rarities[0].isCaught)
@@ -246,6 +255,10 @@ public class CatchFish : MonoBehaviour
 
     public void FailedCatch()
     {
+        playerMotor.canJump = true;
+
+        playerMotor.canMove = true;
+
         foreach (var rarity in currentZone.rarities)
         {
             rarity.isCaught = false; // Reset all rarities in the current zone to not caught

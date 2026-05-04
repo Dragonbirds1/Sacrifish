@@ -10,9 +10,11 @@ public class TempInventoryManager : MonoBehaviour
     public Slot[] inventorySlots;
     public Canvas canvas;
     public KeyCode openInventoryKey;
+    public GameObject inventoryBackground;
 
     void Start()
     {
+        inventoryBackground.SetActive(false);
         // Spawn more slots that are for the inventory not the hotbar and make them so they are hidden until the player opens the inventory and make it so they are in a grid layout and make it so they are not on top of each other
         inventorySlots = new Slot[40]; // Example inventory size
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -22,13 +24,13 @@ public class TempInventoryManager : MonoBehaviour
             inventorySlots[i].slotBackground = Instantiate(Resources.Load<Image>("SlotBackground"), canvas.transform); // Assuming you have a prefab named "SlotBackground" in a Resources folder
             int column = i % 10; // This will give us the column limit to tell the script to go to the next row after 10 columns
             int row = i / 10;
-            inventorySlots[i].slotBackground.rectTransform.anchoredPosition = new Vector2(-550 + (column * 120), 200 - (row * 120)); // Adjust the position as needed
+            inventorySlots[i].slotBackground.rectTransform.anchoredPosition = new Vector2(-550 + (column * 120), 300 - (row * 170)); // Adjust the position as needed
             inventorySlots[i].slotBackground.gameObject.SetActive(false); // Hide the slots until the player opens the inventory
         }
 
         // Now make the hotBar
 
-        hotbarSlots = new Slot[10]; // Example hotbar size
+        hotbarSlots = new Slot[6]; // Example hotbar size
                                        // Make it spawn the image of the slot so the player can see it and know where to put the fish and the text and the quantity of the fish in the inventory
         
        
@@ -38,7 +40,7 @@ public class TempInventoryManager : MonoBehaviour
             // Add the slot background image to the ui canvas
             hotbarSlots[i].slotBackground = Instantiate(Resources.Load<Image>("SlotBackground"), canvas.transform); // Assuming you have a prefab named "SlotBackground" in a Resources folder
             // Move the slot so they are not on top of each other
-            hotbarSlots[i].slotBackground.rectTransform.anchoredPosition = new Vector2(-550 + (i * 120), -460); // Adjust the position as needed
+            hotbarSlots[i].slotBackground.rectTransform.anchoredPosition = new Vector2(-310 + (i * 120), -450); // Adjust the position as needed
         }
 
         // Check if all slots are full and if they are, add a new slot
@@ -105,6 +107,7 @@ public class TempInventoryManager : MonoBehaviour
                 {
                     slot2.slotBackground.gameObject.SetActive(!slot2.slotBackground.gameObject.activeSelf);
                 }
+                inventoryBackground.SetActive(!inventoryBackground.activeSelf);
             }
     }
 

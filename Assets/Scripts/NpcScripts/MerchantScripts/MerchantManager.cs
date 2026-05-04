@@ -22,8 +22,9 @@ public class MerchantManager : MonoBehaviour
     public string lastNpcResponse = "";
     //public float responseDelay = 1.0f; // Delay in seconds before the NPC responds.
     public bool sellFishInHand, sellAllFish, goodBye, fishInHand, haveFish;
-    public GameObject sellFishInHandButton, sellAllFishButton, goodByeButton, background;
+    public GameObject sellFishInHandButton, sellAllFishButton, goodByeButton, background, player;
     public float timeTillRemoveText = 1f; // Time in seconds until the NPC's dialogue text is removed after displaying a response.
+    public float distanceToTalk; // The distance the player needs to be within to talk to the NPC.
     public bool isRemovingText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,30 +39,43 @@ public class MerchantManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey) && !isResponding)
+        if (Vector3.Distance(player.transform.position, transform.position) <= distanceToTalk)
         {
-            isResponding = true;
-            sellFishInHand = false;
-            sellAllFish = false;
-            goodBye = false;
-            GenerateNpcResponse();
-        }
-        if (timeTillNextResponses > 0)
-        {
-            timeTillNextResponses -= 1;
-            if (timeTillNextResponses <= 0)
+            if (Input.GetKeyDown(toggleKey) && !isResponding)
             {
-                isRemovingText = true;
+                isResponding = true;
+                sellFishInHand = false;
+                sellAllFish = false;
+                goodBye = false;
+                GenerateNpcResponse();
+            }
+            if (timeTillNextResponses > 0)
+            {
+                timeTillNextResponses -= 1;
+                if (timeTillNextResponses <= 0)
+                {
+                    isRemovingText = true;
+                }
+            }
+            if (isRemovingText)
+            {
+                timeTillRemoveText -= Time.deltaTime;
+                if (timeTillRemoveText <= 0)
+                {
+                    merchantLines.text = "";
+                    isRemovingText = false;
+                    timeTillRemoveText = 1f;
+                }
             }
         }
-        if (isRemovingText)
+        else if (Vector3.Distance(player.transform.position, transform.position) > distanceToTalk)
         {
-            timeTillRemoveText -= Time.deltaTime;
-            if (timeTillRemoveText <= 0)
+            if (isResponding)
             {
-                merchantLines.text = "";
-                isRemovingText = false;
-                timeTillRemoveText = 1f;
+                goodBye = true;
+                sellFishInHand = false;
+                sellAllFish = false;
+                GenerateNpcResponse();
             }
         }
     }
@@ -183,5 +197,11 @@ public class MerchantManager : MonoBehaviour
         sellAllFishButton.SetActive(false);
         background.SetActive(false);
         GenerateNpcResponse();
+    }
+
+    public void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, distanceToTalk);
     }
 }
