@@ -5,9 +5,33 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Shu/Main Menu.unity
+    guid: a0aa5e54044f893409ee408e8aaf4237
+  - enabled: 1
+    path: Assets/Scenes/Player Test.unity
+    guid: edd1ea20f2df8da4ea962b0614c648be
+  - enabled: 1
+    path: Assets/Scenes/Shu/Credits.unity
+    guid: bfee79e0ac7622646ac7deb663487942
+  - enabled: 1
+    path: Assets/Scenes/Shu/Credit Scenes/Cameron.unity
+    guid: b891af2c6cdefda47b92c4e09aaf590c
+  - enabled: 1
+    path: Assets/Scenes/Shu/Credit Scenes/Cristian.unity
+    guid: b9df9ce2e2151e346b474db4a21339fd
+  - enabled: 1
+    path: Assets/Scenes/Shu/Credit Scenes/Jose.unity
+    guid: 07cf25c71c738b64cb3e1d3886e3e457
+  - enabled: 1
+    path: Assets/Scenes/Shu/Credit Scenes/Warren.unity
+    guid: ead906cb67d79df41acf71d7a02f0c74
+  - enabled: 1
+    path: Assets/Scenes/Shu/Credit Scenes/Shu.unity
+    guid: 5efcd1b1f079c754f8acc358c61e3929
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c465cf6eef8c49444904123cb4809af2,
       type: 2}
