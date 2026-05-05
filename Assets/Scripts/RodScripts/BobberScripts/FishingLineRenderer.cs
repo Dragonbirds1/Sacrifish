@@ -21,7 +21,7 @@ public class FishingLineRenderer : MonoBehaviour
         lr.useWorldSpace = true;
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (rodTip == null || bobber == null || lr == null) return;
 
