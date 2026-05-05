@@ -23,10 +23,10 @@ public class Credits : MonoBehaviour
         //Opens the Shu Scene
         SceneManager.LoadScene("Shu");
     }
-    public void Cristain()
+    public void Cristian()
     {
-        //Opens the Cristain Scene
-        SceneManager.LoadScene("Cristain");
+        //Opens the Cristian Scene
+        SceneManager.LoadScene("Cristian");
     }
     public void Warren()
     {
