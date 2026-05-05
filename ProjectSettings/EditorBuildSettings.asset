@@ -9,29 +9,29 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Shu/Main Menu.unity
-    guid: a0aa5e54044f893409ee408e8aaf4237
+    path: Assets/Scenes/Game Scenes/Main Menu.unity
+    guid: fe243f9ce9b47c242b288b9825961030
   - enabled: 1
-    path: Assets/Scenes/Player Test.unity
-    guid: edd1ea20f2df8da4ea962b0614c648be
+    path: Assets/Scenes/Game Scenes/Player Test.unity
+    guid: fca397e3756c5ee4f8d1e490cfec6c25
   - enabled: 1
-    path: Assets/Scenes/Shu/Credits.unity
-    guid: bfee79e0ac7622646ac7deb663487942
+    path: Assets/Scenes/Game Scenes/Credits.unity
+    guid: e91722e87e5d7d848b5d18ead5f3d454
   - enabled: 1
-    path: Assets/Scenes/Shu/Credit Scenes/Cameron.unity
-    guid: b891af2c6cdefda47b92c4e09aaf590c
+    path: Assets/Scenes/Game Scenes/Credit Scenes/Cameron.unity
+    guid: 4eaf1104fc5fba3428448eb43aae3adb
   - enabled: 1
-    path: Assets/Scenes/Shu/Credit Scenes/Cristian.unity
-    guid: b9df9ce2e2151e346b474db4a21339fd
+    path: Assets/Scenes/Game Scenes/Credit Scenes/Jose.unity
+    guid: 77419555e9d2b8d439ebaa3c1872af68
   - enabled: 1
-    path: Assets/Scenes/Shu/Credit Scenes/Jose.unity
-    guid: 07cf25c71c738b64cb3e1d3886e3e457
+    path: Assets/Scenes/Game Scenes/Credit Scenes/Shu.unity
+    guid: 57c79068b0c7a484ebcf1a7c3a5f4baa
   - enabled: 1
-    path: Assets/Scenes/Shu/Credit Scenes/Warren.unity
-    guid: ead906cb67d79df41acf71d7a02f0c74
+    path: Assets/Scenes/Game Scenes/Credit Scenes/Cristian.unity
+    guid: cd0be17813c4d2e49a01ff91426ed228
   - enabled: 1
-    path: Assets/Scenes/Shu/Credit Scenes/Shu.unity
-    guid: 5efcd1b1f079c754f8acc358c61e3929
+    path: Assets/Scenes/Game Scenes/Credit Scenes/Warren.unity
+    guid: 4fbd534b60942654eac955731fc098dc
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c465cf6eef8c49444904123cb4809af2,
       type: 2}
