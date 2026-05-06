@@ -6,7 +6,7 @@ public class MainMenuUI : MonoBehaviour
     public void Play()
     {
         //Starts Game
-        SceneManager.LoadScene("bettermap");
+        SceneManager.LoadScene("Map");
     }
     public void Quit()
     {

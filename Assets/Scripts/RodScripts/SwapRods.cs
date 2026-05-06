@@ -92,6 +92,78 @@ public class SwapRods : MonoBehaviour
                 rods.isRod = false;
             }
         }
+        if (Input.GetKeyDown(rodSwapKeys[6]))
+        {
+            currentRod = rods[6];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[7]))
+        {
+            currentRod = rods[7];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[8]))
+        {
+            currentRod = rods[8];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[9]))
+        {
+            currentRod = rods[9];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[10]))
+        {
+            currentRod = rods[10];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[11]))
+        {
+            currentRod = rods[11];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[12]))
+        {
+            currentRod = rods[12];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[13]))
+        {
+            currentRod = rods[13];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
+        if (Input.GetKeyDown(rodSwapKeys[14]))
+        {
+            currentRod = rods[14];
+            foreach (var rods in rods)
+            {
+                rods.isRod = false;
+            }
+        }
     }
 }
 

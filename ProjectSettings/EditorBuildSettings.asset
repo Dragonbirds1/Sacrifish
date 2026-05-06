@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Credit Scenes/Warren.unity
     guid: 4fbd534b60942654eac955731fc098dc
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 9b899a223d4556141b60b2b8d1dd3738
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c465cf6eef8c49444904123cb4809af2,
       type: 2}

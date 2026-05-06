@@ -10,7 +10,7 @@ public class FishingLineRenderer : MonoBehaviour
     public int segments = 10;        // Number of points in line
     public float sagHeight = 0.2f;   // Max sag in the middle
 
-    public float maxLineLength = 3f; // Maximum rope length
+    public float maxLineLength; // Maximum rope length
 
     void Start()
     {

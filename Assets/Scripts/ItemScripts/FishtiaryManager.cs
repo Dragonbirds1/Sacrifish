@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 public class FishtiaryManager : MonoBehaviour
 {
+    public PlayerMotor playerMotor;
+
     [Header("Locations")]
     public List<GameObject> buttonCavern;
     public List<GameObject> crownIsland;
@@ -57,6 +59,10 @@ public class FishtiaryManager : MonoBehaviour
 
     [Header("Strings")]
     public string fishName, fishKg, perferedWeather, perferedTime, perferedSeason, perferedBait;
+
+    public KeyCode toggleKey;
+
+    public GameObject fishtiary;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -126,7 +132,11 @@ public class FishtiaryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(toggleKey))
+        {
+            fishtiary.gameObject.SetActive(!fishtiary.gameObject.activeSelf);
+            playerMotor.showCursor = !playerMotor.showCursor;
+        }
     }
 
     public void ButtonCavern()

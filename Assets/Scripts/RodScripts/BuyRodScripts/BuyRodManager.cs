@@ -26,6 +26,10 @@ public class BuyRodManager : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject boat;
+
+    public GameObject fakeBoat;
+
     [Header("UI")]
 
     public TextMeshProUGUI rodNameText;
@@ -52,6 +56,10 @@ public class BuyRodManager : MonoBehaviour
                     catchFish.reckelsToAdd -= rodPrice;
 
                     Debug.Log("Bought " + rodName);
+
+                    boat.SetActive(true);
+
+                    fakeBoat.SetActive(false);
                 }
 
                 else if (catchFish.reckelsToAdd < rodPrice)
