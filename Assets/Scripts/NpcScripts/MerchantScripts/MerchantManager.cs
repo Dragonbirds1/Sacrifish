@@ -22,7 +22,7 @@ public class MerchantManager : MonoBehaviour
     public string lastNpcResponse = "";
     //public float responseDelay = 1.0f; // Delay in seconds before the NPC responds.
     public bool sellFishInHand, sellAllFish, goodBye, fishInHand, haveFish;
-    public GameObject sellFishInHandButton, sellAllFishButton, goodByeButton, background, player;
+    public GameObject sellFishInHandButton, sellAllFishButton, goodByeButton, background, backgroundMerchant, player;
     public float timeTillRemoveText = 1f; // Time in seconds until the NPC's dialogue text is removed after displaying a response.
     public float distanceToTalk; // The distance the player needs to be within to talk to the NPC.
     public bool isRemovingText;
@@ -34,6 +34,7 @@ public class MerchantManager : MonoBehaviour
         sellAllFishButton.SetActive(false);
         goodByeButton.SetActive(false);
         background.SetActive(false);
+        backgroundMerchant.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,35 +48,36 @@ public class MerchantManager : MonoBehaviour
                 sellFishInHand = false;
                 sellAllFish = false;
                 goodBye = false;
+                backgroundMerchant.SetActive(true);
                 GenerateNpcResponse();
-            }
-            if (timeTillNextResponses > 0)
-            {
-                timeTillNextResponses -= 1;
-                if (timeTillNextResponses <= 0)
-                {
-                    isRemovingText = true;
-                }
-            }
-            if (isRemovingText)
-            {
-                timeTillRemoveText -= Time.deltaTime;
-                if (timeTillRemoveText <= 0)
-                {
-                    merchantLines.text = "";
-                    isRemovingText = false;
-                    timeTillRemoveText = 1f;
-                }
             }
         }
         else if (Vector3.Distance(player.transform.position, transform.position) > distanceToTalk)
         {
             if (isResponding)
             {
-                goodBye = true;
-                sellFishInHand = false;
-                sellAllFish = false;
-                GenerateNpcResponse();
+                // Debug the bye later
+            }
+        }
+
+        if (timeTillNextResponses > 0)
+        {
+            timeTillNextResponses -= 1;
+            if (timeTillNextResponses <= 0)
+            {
+                isRemovingText = true;
+            }
+        }
+
+        if (isRemovingText)
+        {
+            timeTillRemoveText -= Time.deltaTime;
+            if (timeTillRemoveText <= 0)
+            {
+                merchantLines.text = "";
+                isRemovingText = false;
+                timeTillRemoveText = 1f;
+                backgroundMerchant.SetActive(false);
             }
         }
     }
@@ -175,6 +177,7 @@ public class MerchantManager : MonoBehaviour
         sellAllFishButton.SetActive(false);
         goodByeButton.SetActive(false);
         background.SetActive(false);
+        backgroundMerchant.SetActive(true);
         GenerateNpcResponse();
     }
     public void SellAllFish()
@@ -185,6 +188,7 @@ public class MerchantManager : MonoBehaviour
         sellFishInHandButton.SetActive(false);
         goodByeButton.SetActive(false);
         background.SetActive(false);
+        backgroundMerchant.SetActive(true);
         GenerateNpcResponse();
     }
     
@@ -196,6 +200,7 @@ public class MerchantManager : MonoBehaviour
         sellFishInHandButton.SetActive(false);
         sellAllFishButton.SetActive(false);
         background.SetActive(false);
+        backgroundMerchant.SetActive(true);
         GenerateNpcResponse();
     }
 
