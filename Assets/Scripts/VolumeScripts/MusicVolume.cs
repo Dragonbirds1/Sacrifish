@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class MasterVolume : MonoBehaviour
+public class MusicVolume : MonoBehaviour
 {
-    [SerializeField] private AudioMixer AudioCooool;
+    [SerializeField] private AudioMixer myMixer;
     [SerializeField] private Slider musicSlider;
 
     private void Start()
@@ -22,12 +22,13 @@ public class MasterVolume : MonoBehaviour
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
-        AudioCooool.SetFloat("Master", Mathf.Log10(volume) * 20);
+        myMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
     private void LoadVolume()
     {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
+
         SetMusicVolume();
     }
 }
