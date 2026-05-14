@@ -18,6 +18,8 @@ public class RodiaryManager : MonoBehaviour
 
     public PlayerMotor playerMotor;
 
+    public PlayerLook playerLook;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +36,9 @@ public class RodiaryManager : MonoBehaviour
         {
             rodiary.SetActive(!rodiary.gameObject.activeSelf);
             playerMotor.showCursor = !playerMotor.showCursor;
+            playerMotor.canMove = !playerMotor.canMove;
+            playerMotor.canJump = !playerMotor.canJump;
+            playerLook.canLook = !playerLook.canLook;
         }
     }
 

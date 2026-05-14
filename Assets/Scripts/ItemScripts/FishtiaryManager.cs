@@ -9,6 +9,8 @@ public class FishtiaryManager : MonoBehaviour
 {
     public PlayerMotor playerMotor;
 
+    public PlayerLook playerLook;
+
     [Header("Locations")]
     public List<GameObject> buttonCavern;
     public List<GameObject> crownIsland;
@@ -136,6 +138,9 @@ public class FishtiaryManager : MonoBehaviour
         {
             fishtiary.gameObject.SetActive(!fishtiary.gameObject.activeSelf);
             playerMotor.showCursor = !playerMotor.showCursor;
+            playerMotor.canMove = !playerMotor.canMove;
+            playerMotor.canJump = !playerMotor.canJump;
+            playerLook.canLook = !playerLook.canLook;
         }
     }
 
@@ -825,7 +830,7 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setJungle)
         {
-            fishNameCommon.text = "Snake Fish";
+            fishNameCommon.text = "Sunfish";
             fishLocationCommon.text = "Forgotten Jungle";
             fishKgCommon.text = "Kg: 0.6";
             perferedWeatherCommon.text = "Perfered Weather: Rain";
@@ -835,8 +840,8 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setAbyss)
         {
-            fishNameCommon.text = "Shadowfin";
-            fishLocationCommon.text = "Mutated Abyss";
+            fishNameCommon.text = "Pufferfish";
+            fishLocationCommon.text = "Ocean";
             fishKgCommon.text = "Kg: 2.4";
             perferedWeatherCommon.text = "Perfered Weather: Foggy";
             perferedTimeCommon.text = "Perfered Time: Night";
@@ -845,8 +850,8 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setPole)
         {
-            fishNameCommon.text = "Pole Fish";
-            fishLocationCommon.text = "North Pole";
+            fishNameCommon.text = "Mutent Sturgeon";
+            fishLocationCommon.text = "Toxic Growth";
             fishKgCommon.text = "Kg: 4.0";
             perferedWeatherCommon.text = "Perfered Weather: Windy";
             perferedTimeCommon.text = "Perfered Time: Day";
@@ -861,7 +866,7 @@ public class FishtiaryManager : MonoBehaviour
 
         if (setButton)
         {
-            fishNameUncommon.text = "CrystalTrout";
+            fishNameUncommon.text = "SteelStash Grouper";
             fishLocationUncommon.text = "Button Cavern";
             fishKgUncommon.text = "Kg: 0.1";
             perferedWeatherUncommon.text = "Perfered Weather: Clear";
@@ -871,7 +876,7 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setCrown)
         {
-            fishNameUncommon.text = "Trout";
+            fishNameUncommon.text = "Catfish";
             fishLocationUncommon.text = "Crown Island";
             fishKgUncommon.text = "Kg: 0.07";
             perferedWeatherUncommon.text = "Perfered Weather: Clear";
@@ -901,7 +906,7 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setJungle)
         {
-            fishNameUncommon.text = "Snake Fish";
+            fishNameUncommon.text = "Helicoprion";
             fishLocationUncommon.text = "Forgotten Jungle";
             fishKgUncommon.text = "Kg: 0.6";
             perferedWeatherUncommon.text = "Perfered Weather: Rain";
@@ -911,8 +916,8 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setAbyss)
         {
-            fishNameUncommon.text = "Shadowfin";
-            fishLocationUncommon.text = "Mutated Abyss";
+            fishNameUncommon.text = "Blue Whale";
+            fishLocationUncommon.text = "Ocean";
             fishKgUncommon.text = "Kg: 2.4";
             perferedWeatherUncommon.text = "Perfered Weather: Foggy";
             perferedTimeUncommon.text = "Perfered Time: Night";
@@ -921,8 +926,8 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setPole)
         {
-            fishNameUncommon.text = "Pole Fish";
-            fishLocationUncommon.text = "North Pole";
+            fishNameUncommon.text = "Frilled Shark";
+            fishLocationUncommon.text = "Toxic Growth";
             fishKgUncommon.text = "Kg: 4.0";
             perferedWeatherUncommon.text = "Perfered Weather: Windy";
             perferedTimeUncommon.text = "Perfered Time: Day";
@@ -937,7 +942,7 @@ public class FishtiaryManager : MonoBehaviour
 
         if (setButton)
         {
-            fishNameRare.text = "CrystalTrout";
+            fishNameRare.text = "Barracuda";
             fishLocationRare.text = "Button Cavern";
             fishKgRare.text = "Kg: 0.1";
             perferedWeatherRare.text = "Perfered Weather: Clear";
@@ -947,7 +952,7 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setCrown)
         {
-            fishNameRare.text = "Trout";
+            fishNameRare.text = "Eel";
             fishLocationRare.text = "Crown Island";
             fishKgRare.text = "Kg: 0.07";
             perferedWeatherRare.text = "Perfered Weather: Clear";
@@ -977,7 +982,7 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setJungle)
         {
-            fishNameRare.text = "Snake Fish";
+            fishNameRare.text = "Great Mud Shark";
             fishLocationRare.text = "Forgotten Jungle";
             fishKgRare.text = "Kg: 0.6";
             perferedWeatherRare.text = "Perfered Weather: Rain";
@@ -987,8 +992,8 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setAbyss)
         {
-            fishNameRare.text = "Shadowfin";
-            fishLocationRare.text = "Mutated Abyss";
+            fishNameRare.text = "Ancient Whale";
+            fishLocationRare.text = "Ocean";
             fishKgRare.text = "Kg: 2.4";
             perferedWeatherRare.text = "Perfered Weather: Foggy";
             perferedTimeRare.text = "Perfered Time: Night";
@@ -997,8 +1002,8 @@ public class FishtiaryManager : MonoBehaviour
         }
         if (setPole)
         {
-            fishNameRare.text = "Pole Fish";
-            fishLocationRare.text = "North Pole";
+            fishNameRare.text = "Sawtooth";
+            fishLocationRare.text = "Toxic Growth";
             fishKgRare.text = "Kg: 4.0";
             perferedWeatherRare.text = "Perfered Weather: Windy";
             perferedTimeRare.text = "Perfered Time: Day";

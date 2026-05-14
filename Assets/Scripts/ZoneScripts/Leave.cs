@@ -7,9 +7,13 @@ public class Leave : MonoBehaviour
 
     public PlayerLook playerLook;
 
+    public CatchFish catchFish;
+
     public GameObject pauseMenu;
 
     public KeyCode pauseKey;
+
+    public AudioClip pauseSong;
 
     public bool isPaused;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,6 +32,7 @@ public class Leave : MonoBehaviour
             playerMotor.canMove = false;
             playerMotor.canJump = false;
             playerLook.canLook = false;
+            catchFish.songIsCurrentZone = false;
             isPaused = true;
         }
     }
@@ -39,6 +44,7 @@ public class Leave : MonoBehaviour
         playerMotor.canMove = true;
         playerMotor.canJump = true;
         playerLook.canLook = true;
+        catchFish.songIsCurrentZone = true;
         isPaused = false;
     }
 

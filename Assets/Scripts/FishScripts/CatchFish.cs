@@ -14,6 +14,7 @@ public class CatchFish : MonoBehaviour
     public FishBarAI fishBarAI;
     public MerchantManager merchantManager;
     public TempInventoryManager tempInventoryManager;
+    public Leave leave;
     public TMP_InputField luckInputField;
     public TextMeshProUGUI reckels;
     public GameObject catchBar;
@@ -24,6 +25,7 @@ public class CatchFish : MonoBehaviour
     public bool fishCaught;
     public bool isDevRod;
     public bool fishOnLine;
+    public bool songIsCurrentZone;
     public string fishRarityName;
     public string rarity;
     public string rarityName;
@@ -43,13 +45,21 @@ public class CatchFish : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        songIsCurrentZone = true;
         catchBar.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        songSource.clip = currentZone.zoneSong;
+        if (songIsCurrentZone)
+        {
+            songSource.clip = currentZone.zoneSong;
+        }
+        else if (!songIsCurrentZone)
+        {
+            songSource.clip = leave.pauseSong;
+        }
         if (!songSource.isPlaying)
         {
             songSource.Play();
@@ -259,6 +269,8 @@ public class CatchFish : MonoBehaviour
 
         playerMotor.canMove = true;
 
+        Destroy(fishClone);
+
         foreach (var rarity in currentZone.rarities)
         {
             rarity.isCaught = false; // Reset all rarities in the current zone to not caught
@@ -286,21 +298,24 @@ public class CatchFish : MonoBehaviour
 
     public void SellAllFish()
     {
-        foreach (var rarity in currentZone.rarities)
+        foreach (var zone in zones)
         {
-            if (rarity.howManyPlayerHasCaught > 0)
+            foreach (var rarity in zone.rarities)
             {
-                Debug.Log("Sold " + rarity.howManyPlayerHasCaught + " " + rarity.fishName + " fish for " + (rarity.value * rarity.howManyPlayerHasCaught) + " coins.");
-                reckelsToAdd += rarity.value * rarity.howManyPlayerHasCaught;
-                rarity.howManyPlayerHasCaught = 0;
-                //Destroy(fishClone);
-                // Make it so the TempInventoryManager script checks for the sold fish and subtracts the quantity of the sold fish from the inventory
-                tempInventoryManager.SellAllFishFromInventory(rarity.fishName, rarity.howManyPlayerHasCaught);
-            }
-            else
-            {
-                Debug.Log("No " + rarity.name + " fish to sell.");
-                merchantManager.haveFish = false;
+                if (rarity.howManyPlayerHasCaught > 0)
+                {
+                    Debug.Log("Sold " + rarity.howManyPlayerHasCaught + " " + rarity.fishName + " fish for " + (rarity.value * rarity.howManyPlayerHasCaught) + " coins.");
+                    reckelsToAdd += rarity.value * rarity.howManyPlayerHasCaught;
+                    rarity.howManyPlayerHasCaught = 0;
+                    //Destroy(fishClone);
+                    // Make it so the TempInventoryManager script checks for the sold fish and subtracts the quantity of the sold fish from the inventory
+                    tempInventoryManager.SellAllFishFromInventory(rarity.fishName, rarity.howManyPlayerHasCaught);
+                }
+                else
+                {
+                    Debug.Log("No " + rarity.name + " fish to sell.");
+                    merchantManager.haveFish = false;
+                }
             }
         }
     }

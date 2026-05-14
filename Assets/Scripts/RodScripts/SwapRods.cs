@@ -12,21 +12,18 @@ public class SwapRods : MonoBehaviour
     public BobberHanging bobberHanging;
     public FishingLineRenderer fishingLineRenderer;
 
-    public KeyCode[] rodSwapKeys; // This is for testing purposes, there will be no keycodes when finished.
-
     public Rods[] rods;
     public Rods currentRod;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentRod = rods[0];
+        currentRod = rods[8];
     }
 
     // Update is called once per frame
     void Update()
     {
-        SwapRod();
         bobberDangling.rodTip = currentRod.rodTip;
         bobberOnLine.rodTip = currentRod.rodTip;
         bobberHanging.rodTip = currentRod.rodTip;
@@ -42,127 +39,138 @@ public class SwapRods : MonoBehaviour
         }
     }
 
-    public void SwapRod()
+    public void DevRod()
     {
-        if (Input.GetKeyDown(rodSwapKeys[0]))
+        currentRod = rods[0];
+        foreach (var rods in rods)
         {
-            currentRod = rods[1];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[1]))
+    }
+
+    public void LeafRod()
+    {
+        currentRod = rods[1];
+        foreach (var rods in rods)
         {
-            currentRod = rods[0];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[2]))
+    }
+
+    public void FlowerRod()
+    {
+        currentRod = rods[2];
+        foreach (var rods in rods)
         {
-            currentRod = rods[2];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false; 
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[3]))
+    }
+
+    public void WormRod()
+    {
+        currentRod = rods[3];
+        foreach (var rods in rods)
         {
-            currentRod = rods[3];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[4]))
+    }
+
+    public void LuckRod()
+    {
+        currentRod = rods[4];
+        foreach (var rods in rods)
         {
-            currentRod = rods[4];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[5]))
+    }
+
+    public void CrownRod()
+    {
+        currentRod = rods[5];
+        foreach (var rods in rods)
         {
-            currentRod = rods[5];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[6]))
+    }
+
+    public void JungleKingRod()
+    {
+        currentRod = rods[6];
+        foreach (var rods in rods)
         {
-            currentRod = rods[6];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[7]))
+    }
+
+    public void ZenithRod()
+    {
+        currentRod = rods[7];
+        foreach (var rods in rods)
         {
-            currentRod = rods[7];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[8]))
+    }
+
+    public void StarterRod()
+    {
+        currentRod = rods[8];
+        foreach (var rods in rods)
         {
-            currentRod = rods[8];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[9]))
+    }
+
+    public void VineRod()
+    {
+        currentRod = rods[9];
+        foreach (var rods in rods)
         {
-            currentRod = rods[9];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[10]))
+    }
+
+    public void PoisonRod()
+    {
+        currentRod = rods[10];
+        foreach (var rods in rods)
         {
-            currentRod = rods[10];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[11]))
+    }
+
+    public void CrystalRod()
+    {
+        currentRod = rods[11];
+        foreach (var rods in rods)
         {
-            currentRod = rods[11];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[12]))
+    }
+
+    public void SunRod()
+    {
+        currentRod = rods[12];
+        foreach (var rods in rods)
         {
-            currentRod = rods[12];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[13]))
+    }
+
+    public void RockyRod()
+    {
+        currentRod = rods[13];
+        foreach (var rods in rods)
         {
-            currentRod = rods[13];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
-        if (Input.GetKeyDown(rodSwapKeys[14]))
+    }
+
+    public void AnchorRod()
+    {
+        currentRod = rods[14];
+        foreach (var rods in rods)
         {
-            currentRod = rods[14];
-            foreach (var rods in rods)
-            {
-                rods.isRod = false;
-            }
+            rods.isRod = false;
         }
     }
 }
