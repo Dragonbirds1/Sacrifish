@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
     public PlayerInput playerInput;
     public PlayerInput.OnFootActions onFoot;
 
+    public KeybindChanger KeybindChanger;
     private PlayerMotor motor;
     private PlayerLook look;
 

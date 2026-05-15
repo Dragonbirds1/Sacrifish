@@ -49,9 +49,9 @@ public class DayNightCycle : MonoBehaviour
             if (isDay)
             {
                 currentExposure -= Time.deltaTime;
-                if (currentExposure <= 0.05f)
+                if (currentExposure <= 0.02f)
                 {
-                    currentExposure = 0.05f;
+                    currentExposure = 0.02f;
                     isTransitioning = false;
                     isDay = !isDay; // Toggle between day and night
                     transitionTime = 0f;
@@ -60,9 +60,9 @@ public class DayNightCycle : MonoBehaviour
             else if (!isDay)
             {
                 currentExposure += Time.deltaTime;
-                if (currentExposure >= 4f)
+                if (currentExposure >= 0.5f)
                 {
-                    currentExposure = 4f;
+                    currentExposure = 0.5f;
                     isTransitioning = false;
                     isDay = !isDay; // Toggle between day and night
                     transitionTime = 0f;
