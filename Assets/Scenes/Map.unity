@@ -67959,90 +67959,105 @@ MonoBehaviour:
     rodCastAnimator: {fileID: 708583855858670060}
     name: DevRod
     rodId: 1
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 7464555278976828464}
     rodModel: {fileID: 5697083303661777128}
     rodCastAnimator: {fileID: 7575924091329305455}
     name: LeafRod
     rodId: 2
+    controlBarSize: 366
     isRod: 0
   - rodTip: {fileID: 821152968771146463}
     rodModel: {fileID: 3230519297630779518}
     rodCastAnimator: {fileID: 424440837522982074}
     name: FlowerRod
     rodId: 3
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 4419398859898782985}
     rodModel: {fileID: 240685183900482453}
     rodCastAnimator: {fileID: 131987041722816126}
     name: WormRod
     rodId: 4
+    controlBarSize: 343
     isRod: 0
   - rodTip: {fileID: 814476497649122689}
     rodModel: {fileID: 651865436111763910}
     rodCastAnimator: {fileID: 6424265423480316663}
     name: LuckyRod
     rodId: 5
+    controlBarSize: 300
     isRod: 0
   - rodTip: {fileID: 1217089461202924977}
     rodModel: {fileID: 6710293128407856603}
     rodCastAnimator: {fileID: 763367952970915199}
     name: CrownRod
     rodId: 6
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 2655440756173633478}
     rodModel: {fileID: 4791298523520187027}
     rodCastAnimator: {fileID: 5735719954416816555}
     name: King Of The Jungle
     rodId: 7
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 702496100613537347}
     rodModel: {fileID: 726795490338833770}
     rodCastAnimator: {fileID: 1387522706631533274}
     name: Zenith Rod
     rodId: 8
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 1918751209608712344}
     rodModel: {fileID: 8733136740830539545}
     rodCastAnimator: {fileID: 221315677084393906}
     name: Starter Rod
     rodId: 9
+    controlBarSize: 153
     isRod: 0
   - rodTip: {fileID: 1191012215147426431}
     rodModel: {fileID: 6573761906016878796}
     rodCastAnimator: {fileID: 7374080169620997055}
     name: Vine Rod
     rodId: 10
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 1746014769184872883}
     rodModel: {fileID: 2190938799669637488}
     rodCastAnimator: {fileID: 3604349444684849017}
     name: Poison Rod
     rodId: 11
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 6894420092551474520}
     rodModel: {fileID: 3757270494114907972}
     rodCastAnimator: {fileID: 865956323370013266}
     name: Crystal Rod
     rodId: 12
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 4245622050335520412}
     rodModel: {fileID: 630127239890599416}
     rodCastAnimator: {fileID: 2562029002390519544}
     name: Poison Flower
     rodId: 12
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 1001331804020696442}
     rodModel: {fileID: 5741508107333269552}
     rodCastAnimator: {fileID: 8176928480496474055}
     name: Rocky Rod
     rodId: 13
+    controlBarSize: 0
     isRod: 0
   - rodTip: {fileID: 8026526388148282600}
     rodModel: {fileID: 8676853733068900582}
     rodCastAnimator: {fileID: 8402593595172834711}
     name: Anchor Rod
     rodId: 14
+    controlBarSize: 0
     isRod: 0
   currentRod:
     rodTip: {fileID: 0}
@@ -68050,6 +68065,7 @@ MonoBehaviour:
     rodCastAnimator: {fileID: 0}
     name: 
     rodId: 0
+    controlBarSize: 0
     isRod: 0
 --- !u!4 &599877670
 Transform:
@@ -77479,6 +77495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae05f68b4c795b478f3806c890bc4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swapRods: {fileID: 599877669}
   controlChanger: {fileID: 1371124583}
   smallBarRect: {fileID: 243766546}
   wallCheck1: {fileID: 1663595785}
