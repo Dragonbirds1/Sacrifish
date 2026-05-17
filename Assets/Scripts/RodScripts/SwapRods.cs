@@ -183,5 +183,6 @@ public class Rods
     public Animator rodCastAnimator;
     public string name;
     public float rodId;
+    public float controlBarSize;
     public bool isRod;
 }

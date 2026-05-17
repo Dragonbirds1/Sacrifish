@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class ControlManager : MonoBehaviour
 {
+    public SwapRods swapRods;
+
     public ControlChanger controlChanger;
 
     public RectTransform smallBarRect, wallCheck1, wallCheck2;
@@ -17,9 +20,19 @@ public class ControlManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        controlBarSet = controlChanger.numberTyped;
-        smallBarRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, controlBarSet);
-        wallCheck1.anchoredPosition = new Vector2(-controlBarSet / 2, wallCheck1.anchoredPosition.y);
-        wallCheck2.anchoredPosition = new Vector2(controlBarSet / 2, wallCheck2.anchoredPosition.y);
+        if (swapRods.currentRod == swapRods.rods[0])
+        {
+            controlBarSet = controlChanger.numberTyped;
+            smallBarRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, controlBarSet);
+            wallCheck1.anchoredPosition = new Vector2(-controlBarSet / 2, wallCheck1.anchoredPosition.y);
+            wallCheck2.anchoredPosition = new Vector2(controlBarSet / 2, wallCheck2.anchoredPosition.y);
+        }
+        else
+        {
+            controlBarSet = swapRods.currentRod.controlBarSize;
+            smallBarRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, controlBarSet);
+            wallCheck1.anchoredPosition = new Vector2(-controlBarSet / 2, wallCheck1.anchoredPosition.y);
+            wallCheck2.anchoredPosition = new Vector2(controlBarSet / 2, wallCheck2.anchoredPosition.y);
+        }
     }
 }
