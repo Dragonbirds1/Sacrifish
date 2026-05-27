@@ -1,8 +1,0 @@
-﻿<Solution>
-  <Project Path="FastScriptReload.Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="CustomToolbar.csproj" />
-  <Project Path="Assembly-CSharp-firstpass.csproj" />
-  <Project Path="FastPlay.csproj" />
-  <Project Path="FastScriptReload.Runtime.csproj" />
-</Solution>
