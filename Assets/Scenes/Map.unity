@@ -63610,8 +63610,8 @@ MonoBehaviour:
   FloatingPower: 100
   castRod: {fileID: 1199592822440488741}
   bobberWaterControl: {fileID: 549820526}
-  waterPlane: {fileID: 287389444}
-  waterRenderer: {fileID: 287389443}
+  waterPlane: {fileID: 543450652695440405}
+  waterRenderer: {fileID: 1711813856105486202}
   tiltSpeed: 5
   sampleOffset: 0.5
 --- !u!114 &549820528
@@ -125118,7 +125118,7 @@ Transform:
   m_GameObject: {fileID: 1162480325}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 3.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -135733,6 +135733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden boat thing (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24edd633a4bad7e46af6595e61034f48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2786534777698132407, guid: 24edd633a4bad7e46af6595e61034f48,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -139568,7 +139573,6 @@ GameObject:
   - component: {fileID: 1268491824}
   - component: {fileID: 1268491823}
   - component: {fileID: 1268491822}
-  - component: {fileID: 1268491821}
   - component: {fileID: 1268491820}
   - component: {fileID: 1268491819}
   - component: {fileID: 1268491818}
@@ -139578,7 +139582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1268491818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139619,14 +139623,14 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65536
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
-  m_CollisionDetection: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!114 &1268491820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139644,31 +139648,6 @@ MonoBehaviour:
   xSensitivity: 0.5
   ySensitivity: 0.5
   canLook: 1
---- !u!143 &1268491821
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268491817}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.15, z: 0}
 --- !u!114 &1268491822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139697,11 +139676,12 @@ MonoBehaviour:
   playerLook: {fileID: 6751910120761440939}
   player: {fileID: 3563842486817190567}
   boat: {fileID: 1268491817}
-  boatController: {fileID: 1268491821}
+  boatRigidbody: {fileID: 1268491819}
   boatSeat: {fileID: 1162480326}
   interactionRange: 26.66
-  speed: 100
+  speed: 6206.4
   currentSpeed: 0
+  acceleration: 0
   gravity: -9.8
   isInBoat: 0
   interactKey: 101
@@ -139716,7 +139696,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.97724396, z: -0, w: 0.21211882}
   m_LocalPosition: {x: 956.92, y: 16.09, z: 410.16}
-  m_LocalScale: {x: 6.8, y: 1.7, z: 7.83}
+  m_LocalScale: {x: 6.8000083, y: 1.7, z: 7.8300095}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1462046400}
@@ -152942,7 +152922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1401542339
 BoxCollider:
   m_ObjectHideFlags: 0
