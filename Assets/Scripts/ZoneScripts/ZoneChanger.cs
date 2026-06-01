@@ -4,6 +4,7 @@ using TMPro;
 public class ZoneChanger : MonoBehaviour
 {
     public CatchFish catchFish;
+    public GameObject[] Crown, Button, Ocean, Jungle, Growth;
     public Animator popupAnim;
     public GameObject popup;
     public TextMeshProUGUI popupText;
@@ -40,6 +41,18 @@ public class ZoneChanger : MonoBehaviour
             catchFish.songSource.Play();
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Crown Island";
+            foreach (GameObject crown in Crown)
+            {
+                crown.SetActive(false);
+            }
+            foreach (GameObject button in Button)
+            {
+                button.SetActive(true);
+            }
+            foreach (GameObject ocean in Ocean)
+            {
+                ocean.SetActive(true);
+            }
             showPopup = true;
         }
         else if (other.CompareTag("Ocean"))
@@ -49,6 +62,18 @@ public class ZoneChanger : MonoBehaviour
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Ocean";
             showPopup = true;
+            foreach (GameObject ocean in Ocean)
+            {
+                ocean.SetActive(false);
+            }
+            foreach (GameObject jungle in Jungle)
+            {
+                jungle.SetActive(true);
+            }
+            foreach (GameObject crown in Crown)
+            {
+                crown.SetActive(true);
+            }
         }
         else if (other.CompareTag("ButtonCavern"))
         {
@@ -57,6 +82,14 @@ public class ZoneChanger : MonoBehaviour
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Button Cavern";
             showPopup = true;
+            foreach (GameObject crown in Crown)
+            {
+                crown.SetActive(true);
+            }
+            foreach (GameObject button in Button)
+            {
+                button.SetActive(false);
+            }
         }
         else if (other.CompareTag("ForgottenJungle"))
         {
@@ -65,6 +98,18 @@ public class ZoneChanger : MonoBehaviour
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Forgotten Jungle";
             showPopup = true;
+            foreach (GameObject jungle in Jungle)
+            {
+                jungle.SetActive(false);
+            }
+            foreach (GameObject growth in Growth)
+            {
+                growth.SetActive(true);
+            }
+            foreach (GameObject ocean in Ocean)
+            {
+                ocean.SetActive(true);
+            }
         }
         else if (other.CompareTag("EternalIslandDesert"))
         {
@@ -80,6 +125,14 @@ public class ZoneChanger : MonoBehaviour
             Debug.Log("Fishing Location: " + catchFish.currentZone.zoneName);
             popupText.text = "Toxic Growth";
             showPopup = true;
+            foreach (GameObject jungle in Jungle)
+            {
+                jungle.SetActive(true);
+            }
+            foreach (GameObject growth in Growth)
+            {
+                growth.SetActive(false);
+            }
         }
         else if (other.CompareTag("EternalIslandIcy"))
         {

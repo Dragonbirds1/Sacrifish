@@ -68073,6 +68073,7 @@ GameObject:
   - component: {fileID: 602061561}
   - component: {fileID: 602061560}
   - component: {fileID: 602061559}
+  - component: {fileID: 602061563}
   m_Layer: 0
   m_Name: Crown
   m_TagString: CrownIsland
@@ -68169,6 +68170,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &602061563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602061558}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd88f7678cb7b44ea53cbe2b828044f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxesToDisable:
+  - {fileID: 602061558}
+  - {fileID: 1195194104}
+  boxesToToggle:
+  - {fileID: 1238981591}
+  - {fileID: 151342306}
+  - {fileID: 1805403715}
+  - {fileID: 1147615179}
+  - {fileID: 633158354}
+  scriptsToToggle:
+  - {fileID: 1238981596}
+  scriptsToDisable:
+  - {fileID: 602061563}
+  - {fileID: 1195194109}
+  toggle: 0
 --- !u!1001 &603497942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128233,6 +128261,7 @@ GameObject:
   - component: {fileID: 1195194107}
   - component: {fileID: 1195194106}
   - component: {fileID: 1195194105}
+  - component: {fileID: 1195194109}
   m_Layer: 0
   m_Name: Crown (1)
   m_TagString: CrownIsland
@@ -128329,6 +128358,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -45.277, z: 0}
+--- !u!114 &1195194109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195194104}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd88f7678cb7b44ea53cbe2b828044f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxesToDisable:
+  - {fileID: 602061558}
+  - {fileID: 1195194104}
+  boxesToToggle:
+  - {fileID: 1238981591}
+  - {fileID: 151342306}
+  - {fileID: 1805403715}
+  - {fileID: 1147615179}
+  - {fileID: 633158354}
+  scriptsToToggle: []
+  scriptsToDisable: []
+  toggle: 0
 --- !u!1 &1199156319
 GameObject:
   m_ObjectHideFlags: 0
@@ -137111,6 +137164,7 @@ GameObject:
   - component: {fileID: 1238981594}
   - component: {fileID: 1238981593}
   - component: {fileID: 1238981592}
+  - component: {fileID: 1238981596}
   m_Layer: 0
   m_Name: Button
   m_TagString: ButtonCavern
@@ -137207,6 +137261,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238981596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238981591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd88f7678cb7b44ea53cbe2b828044f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxesToDisable:
+  - {fileID: 1238981591}
+  boxesToToggle:
+  - {fileID: 1195194104}
+  - {fileID: 602061558}
+  scriptsToToggle:
+  - {fileID: 602061563}
+  - {fileID: 1195194109}
+  scriptsToDisable:
+  - {fileID: 1238981596}
+  toggle: 0
 --- !u!1 &1239784815
 GameObject:
   m_ObjectHideFlags: 0
@@ -196854,6 +196931,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1574167876042558923, guid: bb2ff275d215f3d4188e213b10995ead,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1637510361340815095, guid: bb2ff275d215f3d4188e213b10995ead,
         type: 3}
       propertyPath: barrier1
@@ -196929,6 +197011,11 @@ PrefabInstance:
       propertyPath: toggleChanger
       value: 
       objectReference: {fileID: 1495789050}
+    - target: {fileID: 3255776111457147267, guid: bb2ff275d215f3d4188e213b10995ead,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3749266322666262601, guid: bb2ff275d215f3d4188e213b10995ead,
         type: 3}
       propertyPath: bobber
@@ -196999,6 +197086,11 @@ PrefabInstance:
       propertyPath: bobber
       value: 
       objectReference: {fileID: 549820522}
+    - target: {fileID: 7409404947886699094, guid: bb2ff275d215f3d4188e213b10995ead,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8098655068978996411, guid: bb2ff275d215f3d4188e213b10995ead,
         type: 3}
       propertyPath: bobber
