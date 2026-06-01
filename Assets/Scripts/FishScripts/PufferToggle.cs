@@ -17,10 +17,6 @@ public class PufferToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey) && !isPuffed)
-        {
-            Augh();
-        }
 
         if (isPuffed)
         {
@@ -37,7 +33,10 @@ public class PufferToggle : MonoBehaviour
 
     public void Augh()
     {
-        pufferSound.Play();
-        isPuffed = true;
+        if (!isPuffed)
+        {
+            pufferSound.Play();
+            isPuffed = true;
+        }
     }
 }
