@@ -54,6 +54,7 @@ public class ZoneChanger : MonoBehaviour
                 ocean.SetActive(true);
             }
             showPopup = true;
+            return;
         }
         else if (other.CompareTag("Ocean"))
         {
@@ -74,6 +75,7 @@ public class ZoneChanger : MonoBehaviour
             {
                 crown.SetActive(true);
             }
+            return;
         }
         else if (other.CompareTag("ButtonCavern"))
         {
@@ -90,6 +92,7 @@ public class ZoneChanger : MonoBehaviour
             {
                 button.SetActive(false);
             }
+            return;
         }
         else if (other.CompareTag("ForgottenJungle"))
         {
@@ -110,6 +113,7 @@ public class ZoneChanger : MonoBehaviour
             {
                 ocean.SetActive(true);
             }
+            return;
         }
         else if (other.CompareTag("EternalIslandDesert"))
         {
@@ -133,6 +137,7 @@ public class ZoneChanger : MonoBehaviour
             {
                 growth.SetActive(false);
             }
+            return;
         }
         else if (other.CompareTag("EternalIslandIcy"))
         {
