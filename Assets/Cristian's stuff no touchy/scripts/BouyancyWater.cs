@@ -12,8 +12,8 @@ public class WaterBuoyant : MonoBehaviour
     public BobberWaterControl bobberWaterControl;
 
     [Header("Water Plane Reference")]
-    public Transform waterPlane;
-    public Renderer waterRenderer;
+    public Transform[] waterPlane; // Make this a list so multiple water planes can be supported
+    public Renderer[] waterRenderer; // Optional: assign renderers directly if you want to read shader params without needing a transform reference
 
     [Header("Tilt Settings")]
     public float tiltSpeed = 5f;
@@ -34,10 +34,16 @@ public class WaterBuoyant : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
 
         if (waterRenderer == null && waterPlane != null)
-            waterRenderer = waterPlane.GetComponent<Renderer>();
+        {
+            waterRenderer = new Renderer[waterPlane.Length];
+            for (int i = 0; i < waterPlane.Length; i++)
+            {
+                waterRenderer[i] = waterPlane[i].GetComponent<Renderer>();
+            }
+        }
 
-        if (waterRenderer != null)
-            waterMat = waterRenderer.material;
+        if (waterRenderer != null && waterRenderer.Length > 0)
+            waterMat = waterRenderer[0].material;
     }
 
     void ReadShaderParams()
@@ -52,8 +58,8 @@ public class WaterBuoyant : MonoBehaviour
 
     Vector2 WorldToUV(Vector3 worldPos)
     {
-        Vector3 localPos = waterPlane != null
-            ? waterPlane.InverseTransformPoint(worldPos)
+        Vector3 localPos = waterPlane != null && waterPlane.Length > 0
+            ? waterPlane[0].InverseTransformPoint(worldPos)
             : worldPos;
 
         return new Vector2(localPos.x / 10f + 0.5f, localPos.z / 10f + 0.5f);
@@ -61,7 +67,7 @@ public class WaterBuoyant : MonoBehaviour
 
     float GetWaveHeightAtPosition(Vector3 worldPos)
     {
-        float baseY = waterPlane != null ? waterPlane.position.y : 0f;
+        float baseY = waterPlane != null && waterPlane.Length > 0 ? waterPlane[0].position.y : 0f;
 
         Vector2 uv = WorldToUV(worldPos);
         Vector2 offset = FlowDirection * FlowSpeed * Time.time;
