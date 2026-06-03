@@ -89081,6 +89081,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632099247}
   m_Mesh: {fileID: -399240446695790750, guid: 081697f1a55e8b44fb08831fff3bcfbc, type: 3}
+--- !u!23 &632796340 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 1ca5de835db68d74094c56edc3de2ca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1012976638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &632796341 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ca5de835db68d74094c56edc3de2ca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1012976638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &632933193
 GameObject:
   m_ObjectHideFlags: 0
@@ -139421,6 +139433,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019005857, y: 0.020000007, z: 0.020000022}
   m_Center: {x: -0.0004970706, y: 0.000003814638, z: -0.0000019070524}
+--- !u!54 &982777574
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982777570}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &982777575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982777570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d694ded405e5947ab5ca8c8a688bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnderWaterDrag: 3
+  UnderWaterAngularDrag: 1
+  AirDrag: 0
+  AirAngularDrag: 0.05
+  FloatingPower: 15
+  castRod: {fileID: 0}
+  bobberWaterControl: {fileID: 0}
+  waterPlane: {fileID: 632796341}
+  waterRenderer: {fileID: 632796340}
+  tiltSpeed: 5
+  sampleOffset: 0.5
 --- !u!1 &983568589
 GameObject:
   m_ObjectHideFlags: 0
@@ -300657,6 +300719,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87446966106503182, guid: 2cade6b04ff4c3e45a317591347abe0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 87446966106503182, guid: 2cade6b04ff4c3e45a317591347abe0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 87446966106503182, guid: 2cade6b04ff4c3e45a317591347abe0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.33
+      objectReference: {fileID: 0}
     - target: {fileID: 2755034117981217547, guid: 2cade6b04ff4c3e45a317591347abe0b,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -300798,6 +300875,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 982777572}
+    - targetCorrespondingSourceObject: {fileID: 6208555237014824210, guid: 2cade6b04ff4c3e45a317591347abe0b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 982777575}
+    - targetCorrespondingSourceObject: {fileID: 6208555237014824210, guid: 2cade6b04ff4c3e45a317591347abe0b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 982777574}
     - targetCorrespondingSourceObject: {fileID: 1955119056622083900, guid: 2cade6b04ff4c3e45a317591347abe0b,
         type: 3}
       insertIndex: -1
