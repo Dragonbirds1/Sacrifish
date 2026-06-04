@@ -1796,7 +1796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &942339274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2322,7 +2322,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!154 &1493672582
 TerrainCollider:
@@ -2362,7 +2362,7 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMinimumLODSimplification: 5
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -3185,7 +3185,7 @@ GameObject:
   - component: {fileID: 7580032928379457772}
   - component: {fileID: 9044977419323379410}
   m_Layer: 0
-  m_Name: Cylinder.002
+  m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3207,12 +3207,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622673672627757746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.755, y: 4.557, z: -0.242}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7270775, y: 0.31117693, z: -0.23304959}
+  m_LocalScale: {x: 0.48150837, y: 0.48150834, z: 0.48150837}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 4083547710185823887}
+  m_Father: {fileID: 3850723356719620449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &854628346873676295
 SphereCollider:
@@ -3247,7 +3247,7 @@ GameObject:
   - component: {fileID: 4735554525855700440}
   - component: {fileID: 5432606229728431793}
   m_Layer: 0
-  m_Name: Cylinder.001
+  m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3269,12 +3269,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5573182957736836146}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.755, y: 4.557, z: 0.217}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7270778, y: 0.31117693, z: 0.20897464}
+  m_LocalScale: {x: 0.48150837, y: 0.48150834, z: 0.48150837}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 4083547710185823887}
+  m_Father: {fileID: 3850723356719620449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1294677065018532416
 MeshRenderer:
@@ -3424,7 +3424,7 @@ GameObject:
   - component: {fileID: 7504932586051970655}
   - component: {fileID: 854628346873676295}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3510,7 +3510,7 @@ GameObject:
   - component: {fileID: 9209049355448294654}
   - component: {fileID: 2292026114812952776}
   m_Layer: 0
-  m_Name: Cylinder.003
+  m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3528,7 +3528,7 @@ GameObject:
   - component: {fileID: 5599648757714587072}
   - component: {fileID: 7186779055731217010}
   m_Layer: 0
-  m_Name: Icosphere
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3546,7 +3546,7 @@ GameObject:
   - component: {fileID: 7057040236869141337}
   - component: {fileID: 7089386139173012915}
   m_Layer: 0
-  m_Name: Cylinder.004
+  m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3564,7 +3564,11 @@ Transform:
   m_LocalPosition: {x: -0, y: 4.2338724, z: 0}
   m_LocalScale: {x: 1.0384036, y: 1.0384036, z: 1.0384036}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 629646882007042131}
+  - {fileID: 4257934583567866010}
+  - {fileID: 8417116540440755167}
+  - {fileID: 1236012959175708692}
   m_Father: {fileID: 4083547710185823887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4083547710185823887
@@ -3588,10 +3592,6 @@ Transform:
   - {fileID: 9219627738790743062}
   - {fileID: 7134988190693047886}
   - {fileID: 3850723356719620449}
-  - {fileID: 629646882007042131}
-  - {fileID: 4257934583567866010}
-  - {fileID: 8417116540440755167}
-  - {fileID: 1236012959175708692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 126.34, z: 0}
 --- !u!4 &4257934583567866010
@@ -3602,12 +3602,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7336233356935898962}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.905, y: 4.599, z: -0.258}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.87152964, y: 0.35162392, z: -0.24845837}
+  m_LocalScale: {x: 0.24075419, y: 0.24075417, z: 0.24075419}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 4083547710185823887}
+  m_Father: {fileID: 3850723356719620449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4735554525855700440
 MeshFilter:
@@ -3690,7 +3690,7 @@ GameObject:
   - component: {fileID: 1294677065018532416}
   - component: {fileID: 7265521845430717633}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3774,13 +3774,36 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4083547710185823887}
+  - component: {fileID: 6024067278844245819}
   m_Layer: 0
-  m_Name: A pose
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &6024067278844245819
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024067278844245818}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d025b32464e910a4386b05e102a5efe4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6124116923996087836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,7 +3816,7 @@ GameObject:
   - component: {fileID: 8580834049018938902}
   - component: {fileID: 5999577149448131581}
   m_Layer: 0
-  m_Name: Cylinder.005
+  m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3832,7 +3855,7 @@ GameObject:
   - component: {fileID: 5882927383596755595}
   - component: {fileID: 1504482523523051542}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3985,7 +4008,7 @@ GameObject:
   - component: {fileID: 1598335940839470834}
   - component: {fileID: 6263187644902190570}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4068,7 +4091,7 @@ Transform:
   m_GameObject: {fileID: 173671057792437084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014152711, y: 0.87298083, z: 0.45592424}
+  m_LocalPosition: {x: -0.014152711, y: 0.8729808, z: 0.45592424}
   m_LocalScale: {x: 0.3486258, y: 0.61768854, z: 0.3486258}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4086,7 +4109,7 @@ GameObject:
   - component: {fileID: 2220207881987326300}
   - component: {fileID: 8535294976296766038}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Scarf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4108,12 +4131,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8750123973624211305}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.905, y: 4.599, z: 0.242}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.87153006, y: 0.35162392, z: 0.23305008}
+  m_LocalScale: {x: 0.24075419, y: 0.24075417, z: 0.24075419}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4083547710185823887}
+  m_Father: {fileID: 3850723356719620449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8535294976296766038
 MeshRenderer:
@@ -4196,7 +4219,7 @@ GameObject:
   - component: {fileID: 63297080938126312}
   - component: {fileID: 9133437478536330934}
   m_Layer: 0
-  m_Name: Sphere (3)
+  m_Name: RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
