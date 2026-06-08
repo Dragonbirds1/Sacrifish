@@ -7,6 +7,7 @@ public class PufferToggle : MonoBehaviour
     public KeyCode toggleKey;
     public float toggleCooldown; // Cooldown time in seconds between toggles
     public bool isPuffed; // Flag to track whether the pufferfish is currently puffed
+    public bool startThing;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +29,12 @@ public class PufferToggle : MonoBehaviour
                 pufferAnimator.SetBool("Augh", false);
                 isPuffed = false;
             }
+        }
+
+        if (startThing)
+        {
+            Augh();
+            startThing = false;
         }
     }
 
