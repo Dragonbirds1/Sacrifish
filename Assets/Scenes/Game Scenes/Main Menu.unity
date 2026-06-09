@@ -842,8 +842,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240746074}
-  - component: {fileID: 240746073}
-  - component: {fileID: 240746072}
   m_Layer: 15
   m_Name: Boat
   m_TagString: Untagged
@@ -851,54 +849,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &240746072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240746071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c81d3482658d254f87840caa76d6b7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnderWaterDrag: 3
-  UnderWaterAngularDrag: 1
-  AirDrag: 0
-  AirAngularDrag: 0.005
-  FloatingPower: 100
-  waterPlane: {fileID: 583635993}
-  waterRenderer: {fileID: 583635991}
-  tiltSpeed: 5
-  sampleOffset: 2
---- !u!54 &240746073
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240746071}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 65536
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
 --- !u!4 &240746074
 Transform:
   m_ObjectHideFlags: 0
@@ -1510,7 +1460,7 @@ Transform:
   m_GameObject: {fileID: 474534232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.89234847, z: -0, w: 0.45134705}
-  m_LocalPosition: {x: 3.368843, y: 53.11645, z: -219.49753}
+  m_LocalPosition: {x: 3.368843, y: 54.3, z: -219.49753}
   m_LocalScale: {x: 9.36, y: 9.36, z: 9.36}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5100,7 +5050,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnim: {fileID: 6024067278844245819}
-  OtherAnim: {fileID: 2114934543}
+  otherAnim: {fileID: 2114934543}
+  isPlayerAnim: 0
+  isOtherAnim: 0
+  timerStart: 0
+  hatToggle: 0
+  sharkToggle: 0
+  scareToggle: 0
+  timer: 0
+  HatTimer: 0
+  SharkTimer: 0
+  ScareTimer: 0
+  animNumber: 0
 --- !u!4 &5631714919575201
 Transform:
   m_ObjectHideFlags: 0
@@ -10640,7 +10601,7 @@ Transform:
   m_GameObject: {fileID: 2957939290343834601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 4.2338724, z: 0}
+  m_LocalPosition: {x: -0, y: 4.233872, z: 0}
   m_LocalScale: {x: 1.0384036, y: 1.0384036, z: 1.0384036}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10889,7 +10850,7 @@ Transform:
   m_GameObject: {fileID: 6024067278844245818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.886863, z: 0}
+  m_LocalPosition: {x: 0, y: -3.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
